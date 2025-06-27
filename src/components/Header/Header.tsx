@@ -9,7 +9,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="sticky top-[48px] bg-white/80 backdrop-blur-md z-30 border-b border-gray-200" style={{marginTop:'5%'}}>
+      <header className="sticky top-[48px] bg-white/80 backdrop-blur-md z-30 border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-20">
 
