@@ -16,7 +16,7 @@ const Header: React.FC = () => {
             {/* Logo (left) */}
             <div className="flex-1 flex justify-start">
               <a href="/">
-                <img src={images.logo} alt="Tendaly Logo" className="h-12" />
+           <img src={images.logo} alt="Tendaly Logo" className="h-8 md:h-12" />
               </a>
             </div>
 
