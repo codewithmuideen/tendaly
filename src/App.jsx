@@ -4,13 +4,14 @@ import { useEffect, useState } from 'react';
 
 import GlobalStyles from './GlobalStyles';
 import TopHeader from './components/TopHeader';
-import Header from './components/Header/Header';
+// import Header from './components/Header/Header';
 import SiteFooter from './components/SiteFooter';
 import Preloader from './components/Preloader'; // 👈 Import preloader
 
 // Pages
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import Header from './components/Header';
 
 
 function App() {
@@ -33,8 +34,9 @@ function App() {
         <div className="bg-white text-brand-gray-text">
           <GlobalStyles />
           <TopHeader />
-          <Header />
-       
+          {/* <Header /> */}
+
+       <Header />
           <main>
             <Routes>
               <Route path="/" element={<Home />} />

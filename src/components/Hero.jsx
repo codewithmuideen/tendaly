@@ -22,11 +22,15 @@ const floatingMessages = [
 
 const Hero = ({ onScrollToFeatures }) => {
   return (
-    <section className="relative z-0 bg-[#0097FC] mt-10 w-full pt-20 pb-20 px-6 md:px-12 overflow-hidden">
+  <section
+  id="hero"
+  className="relative z-0 bg-[#0097FC] w-full pb-20 px-6 md:px-12 overflow-hidden"
+  style={{ paddingTop: 'calc(var(--header-h) + 2rem)' }}   // was + 2rem → now + 4rem
+>
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-16 z-10 relative">
 
         {/* LEFT COLUMN */}
-        <div className="text-center lg:text-left">
+        <div className="text-center lg:text-left pt-20">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
             Smarter Care <br /> Connections
           </h1>
@@ -54,7 +58,7 @@ const Hero = ({ onScrollToFeatures }) => {
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="relative flex justify-center">
+        <div className="relative flex justify-center mt-10">
           <img
             src={images.heroMockup}
             alt="Tendaly App Mockup"
