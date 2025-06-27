@@ -22,7 +22,7 @@ const floatingMessages = [
 
 const Hero = ({ onScrollToFeatures }) => {
   return (
-    <section className="relative z-0 bg-[#0097FC] pt-36 md:pt-40 pb-20 px-6 md:px-12 overflow-hidden">
+    <section className="relative z-0 bg-[#0097FC] mt-10 w-full pt-20 pb-20 px-6 md:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-16 z-10 relative">
 
         {/* LEFT COLUMN */}
