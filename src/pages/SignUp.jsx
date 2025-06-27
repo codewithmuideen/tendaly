@@ -53,7 +53,7 @@ const SignUp = () => {
         <div className="max-w-md text-center">
           <h1 className="text-4xl font-bold mb-4">Join a Community of Care</h1>
           <p className="text-lg text-blue-100 mb-6">
-            Become a part of the Tendly network and start making a difference today. We provide the tools for you to succeed.
+            Become a part of the Tendaly network and start making a difference today. We provide the tools for you to succeed.
           </p>
           <div className="bg-white/10 p-8 rounded-lg">
              <FaUsers size={80} className="mx-auto text-white" />
@@ -65,7 +65,7 @@ const SignUp = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-6 sm:p-12 bg-[#f2f4f7]">
         <div className="w-full max-w-md">
           <h2 className="text-3xl font-bold text-[#0b5aad] mb-4">Create Your Account</h2>
-          <p className="text-slate-600 mb-8">Let's get you started on your journey with Tendly.</p>
+          <p className="text-slate-600 mb-8">Let's get you started on your journey with Tendaly.</p>
 
           {/* 👇 REMOVED: Social signup buttons and "OR" divider have been removed */}
 

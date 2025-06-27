@@ -24,7 +24,7 @@ const Login = () => {
         <div className="max-w-md text-center">
           <h1 className="text-4xl font-bold mb-4">Welcome Back!</h1>
           <p className="text-lg text-blue-100 mb-6">
-            Log in to access your dashboard, manage your schedule, and connect with families in the Tendly network.
+            Log in to access your dashboard, manage your schedule, and connect with families in the Tendaly network.
           </p>
           <div className="bg-white/10 p-8 rounded-lg">
              <FaLock size={80} className="mx-auto text-[#0099ff]" />

@@ -1,6 +1,7 @@
 import React from 'react';
 // Assuming you have an images constant file like this
 import images from '../constants/images';
+
 // This component is now defined outside of Hero for better performance.
 const FloatingMessage = ({ text, className }) => (
   <div
@@ -12,12 +13,12 @@ const FloatingMessage = ({ text, className }) => (
 
 const Hero = () => {
   return (
-    // 👇 MODIFIED:
-    // 1. Uses padding on mobile (`py-20`) to create space.
-    // 2. Switches to a flex-centered layout with min-height ONLY on large screens (`lg:`).
-    // This ensures the text stacks correctly on top on mobile, leaving space at the bottom.
+    // 👇 CORRECTED:
+    // Changed `py-20` to `pt-32 pb-20`. This adds more top padding on mobile to clear
+    // the fixed navbar, preventing content from being hidden underneath it on refresh.
+    // The `lg:pt-0 lg:pb-0` ensures the desktop layout remains centered as intended.
     <section 
-      className="relative bg-white overflow-hidden py-20 lg:py-0 lg:flex lg:items-center lg:min-h-[70vh]"
+      className="relative bg-white overflow-hidden pt-32 pb-20 lg:pt-0 lg:pb-0 lg:flex lg:items-center lg:min-h-[70vh]"
     >
       {/* Optional: Faint Wavy Background Lines */}
       <div
@@ -33,11 +34,6 @@ const Hero = () => {
       <div className="relative container mx-auto px-6 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          {/* 👇 MODIFIED: 
-              - This text column is now FIRST in the code.
-              - This makes it appear on top on mobile screens by default.
-              - Removed the `order` classes as they are no longer needed.
-          */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black leading-tight">
               Care for your
@@ -59,10 +55,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* 👇 MODIFIED: 
-              - This image column is now SECOND in the code.
-              - It will appear below the text on mobile screens.
-          */}
           <div className="relative flex items-center justify-center">
             <img
               src={images.heroMockup}
@@ -70,10 +62,6 @@ const Hero = () => {
               className="w-full max-w-lg"
             />
 
-            {/* 👇 MODIFIED: 
-                - Removed `hidden sm:block` from all messages.
-                - They are now visible on mobile devices.
-            */}
             <FloatingMessage
               text="We care for your parents"
               className="bottom-1/4 left-0 -translate-x-1/4"

@@ -10,7 +10,7 @@ const Preloader = () => {
         alt="Logo"
         className="w-24 h-24 animate-bounce mb-4"
       />
-      <p className="text-blue-600 text-lg font-semibold animate-pulse">
+      <p className="text-blue-600 text-lg font-semibold animate-pulse" style={{fontFamily:'Montserrat'}}>
         Loading Tendaly...
       </p>
     </div>

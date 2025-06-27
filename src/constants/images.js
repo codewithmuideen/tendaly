@@ -29,7 +29,6 @@ import contact from "../assets/contact-management-0a833c83f3611b9e61f7a4dfd9372a
 import email from "../assets/email-marketing-ff71e027ced153169fd4a4159d0795d7.png";
 import sales from "../assets/sales-pipeline-f691e61844b7bb448ce4616ef862bb40.png";
 import sale from "../assets/sales-analytics-83b717aa7f25638cfaa36f1aea71a692.png";
-import g2AwardsComposite from "../assets/df3f70a1dee149307d3490dea276c84aae011ed9-1400x283 (1).avif";
 import featureContactManagement from "../assets/feature-contact-management.webp";
 import featureTasksCalendar from "../assets/feature-tasks.webp";
 import featureSalesPipeline from "../assets/feature-sales-pipeline.webp";
@@ -37,10 +36,6 @@ import featureProjectManagement from "../assets/feature-project-management.webp"
 import featureSalesAnalytics from "../assets/feature-sales-analytics.webp";
 import mysale from "../assets/5ecc4edc3fa12e784fd2940da790d47e213ec225-1200x628 (1).avif";
 import mycrm from "../assets/3d6ca9b0de80bb692d58ea21972a31d76fc25acf-800x520.avif";
-import myproduct from "../assets/6fe13daa384b71bd0e91a18e545bbffb98d28dcc-1200x628.avif";
-import sage from "../assets/sage.svg";
-import benefitImage from "../assets/benefits.webp";
-import headerImage from "../assets/header-image.webp";
 import playstore from "../assets/store-google.svg";
 import appstore from "../assets/store-ios.svg";
 import heroMockup from "../assets/heropic.png";
@@ -53,28 +48,23 @@ import sticky0 from "../assets/sticky0.jpg";
 
 
 export default {
-  benefitImage,
-  headerImage,
   logo,
   sticky,
   sticky0,
   logo2,
   white,
   blue,
-  sage,
   playstore,
   appstore,
   heroMockup,
   workflow,
   mycrm,
   mysale,
-  myproduct,
   featureContactManagement,
   featureProjectManagement,
   featureTasksCalendar,
   featureSalesAnalytics,
   featureSalesPipeline,
-  g2AwardsComposite,
   project,
   contact,
   email,

@@ -56,7 +56,7 @@ const SiteFooter = () => {
   ];
 
   return (
-    <footer className="bg-[#2E3134]" aria-labelledby="footer-heading">
+    <footer className="bg-[#061422]" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>

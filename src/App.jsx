@@ -18,6 +18,10 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import AboutTendalyPage from './pages/AboutTendalyPage';
 import WaitlistBanner from './components/WaitlistBanner';
+import HowItWorksCombined from './HowItWorksCombined';
+import Testimonials from './pages/Testimonials';
+import FeaturesPage from './pages/FeaturesPage';
+
 
 
 function App() {
@@ -52,6 +56,9 @@ function App() {
               <Route path="/signup" element={<SignUp />} />
               <Route path="/login" element={<Login />} />
               <Route path="/about" element={<AboutTendalyPage />} />
+              <Route path="/how-it-works" element={<HowItWorksCombined />} />
+              <Route path="/testimonials" element={<Testimonials />} />
+              <Route path="/features" element={<FeaturesPage />} />
             </Routes>
           </main>
           <WaitlistBanner />

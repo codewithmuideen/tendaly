@@ -1,4 +1,4 @@
-// src/pages/AboutTendlyPage.jsx
+// src/pages/AboutTendalyPage.jsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 // 👇 CORRECTED: Icons have been updated to FaPlus and FaMinus
@@ -70,7 +70,7 @@ const AccordionItem = ({ data, isOpen, onClick }) => {
 
 
 // --- The Main About Page Component ---
-const AboutTendlyPage = () => {
+const AboutTendalyPage = () => {
   // We'll have the first item open by default (index 0)
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -78,7 +78,7 @@ const AboutTendlyPage = () => {
     {
       icon: <FaUsers />,
       title: 'Who We Are',
-      text: `Tendly is a modern platform designed to transform the caregiving and personal services industry by seamlessly connecting clients, from individuals with disabilities to families seeking home care services, with trusted, compassionate professionals. Built with a strong focus on user experience, Tendly simplifies scheduling, communication, and service delivery to ensure a smooth, stress-free experience for both clients and providers. Whether it’s in-home care or wellness services, Tendly combines warmth, reliability, and innovation to support meaningful, human-centered.`,
+      text: `Tendaly is a modern platform designed to transform the caregiving and personal services industry by seamlessly connecting clients, from individuals with disabilities to families seeking home care services, with trusted, compassionate professionals. Built with a strong focus on user experience, Tendaly simplifies scheduling, communication, and service delivery to ensure a smooth, stress-free experience for both clients and providers. Whether it’s in-home care or wellness services, Tendaly combines warmth, reliability, and innovation to support meaningful, human-centered.`,
     },
     {
       icon: <FaBullseye />,
@@ -100,7 +100,7 @@ const AboutTendlyPage = () => {
   return (
     <div className="min-h-screen bg-[#f2f4f7] py-12 sm:py-20 px-4 flex flex-col items-center">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#0b5aad]">About Tendly</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-[#0b5aad]">About Tendaly</h1>
         <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
           The purpose, passion, and people behind our mission to revolutionize the care industry.
         </p>
@@ -120,4 +120,4 @@ const AboutTendlyPage = () => {
   );
 };
 
-export default AboutTendlyPage;
+export default AboutTendalyPage;
