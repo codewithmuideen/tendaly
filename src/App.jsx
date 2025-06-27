@@ -12,6 +12,12 @@ import Preloader from './components/Preloader'; // 👈 Import preloader
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Header from './components/Header';
+import Waitlist from './pages/Waitlist';
+import BecomeProvider from './pages/BecomeProvider';
+import SignUp from './pages/SignUp';
+import Login from './pages/Login';
+import AboutTendalyPage from './pages/AboutTendalyPage';
+import WaitlistBanner from './components/WaitlistBanner';
 
 
 function App() {
@@ -41,8 +47,14 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/waitlist" element={<Waitlist />} />
+              <Route path="/provider" element={<BecomeProvider />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/about" element={<AboutTendalyPage />} />
             </Routes>
           </main>
+          <WaitlistBanner />
           <SiteFooter />
         </div>
       )}

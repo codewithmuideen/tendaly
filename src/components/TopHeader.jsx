@@ -29,8 +29,8 @@ const TopHeader = () => {
             <span className="ml-2">Rated 4.7 on HIPAA, PCI, DSS</span>
           </a>
           <div className="flex items-center gap-6">
-            <a href="/partners" className="hover:underline">Become a Provider</a>
-            <a href="/wait-list" className="hover:underline">Join Waitlist</a>
+            <a href="/provider" className="hover:underline">Become a Provider</a>
+            <a href="/waitlist" className="hover:underline">Join Waitlist</a>
           </div>
         </div>
       </div>

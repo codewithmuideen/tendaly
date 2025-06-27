@@ -1,7 +1,7 @@
-// src/components/FaqSection.jsx
 import React, { useState } from 'react';
+import { HiPlus, HiX, HiArrowRight } from 'react-icons/hi';
 
-// Tendaly-specific FAQs
+// Reverted to Tendaly-specific FAQs
 const faqData = [
   {
     question: 'What is Tendaly?',
@@ -40,31 +40,35 @@ const faqData = [
   },
 ];
 
-// Reusable accordion item
+
+// Reusable accordion item, styled to match the image
 const FaqItem = ({ question, answer, isOpen, onClick }) => (
-  <div className="border-b border-gray-200 py-4">
+  <div className="bg-gray-100 rounded-lg">
     <button
-      className="flex w-full items-center justify-between text-left focus:outline-none focus-visible:ring focus-visible:ring-indigo-500 focus-visible:ring-opacity-75 rounded"
+      className="flex w-full items-center justify-between p-5 text-left"
       onClick={onClick}
       aria-expanded={isOpen}
     >
-      <span className="text-lg font-medium text-gray-800">{question}</span>
-      <span className="text-2xl text-indigo-500 transform transition-transform duration-300">
-        {isOpen ? '−' : '+'}
+      <span className="font-medium text-gray-800">{question}</span>
+      <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-gray-900 text-white">
+        {isOpen ? <HiX className="h-5 w-5" /> : <HiPlus className="h-5 w-5" />}
       </span>
     </button>
     <div
-      className={`overflow-hidden transition-all duration-500 ease-in-out ${
-        isOpen ? 'max-h-96 mt-4' : 'max-h-0'
+      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+        isOpen ? 'max-h-screen' : 'max-h-0'
       }`}
     >
-      <p className="leading-relaxed text-gray-600">{answer}</p>
+      <div className="px-5 pb-5">
+        <p className="leading-relaxed text-gray-600">{answer}</p>
+      </div>
     </div>
   </div>
 );
 
 // Main FAQ component
 const FaqSection = () => {
+  // Set to null so all items are closed by default
   const [openIndex, setOpenIndex] = useState(null);
 
   const handleToggle = (index) =>
@@ -72,28 +76,38 @@ const FaqSection = () => {
 
   return (
     <section className="bg-white font-sans">
-      <div className="container mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
-        <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-3">
-          {/* Title */}
+      <div className="mx-auto max-w-7xl rounded-lg border border-gray-200 px-6 py-16 sm:py-24 lg:px-8">
+        <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-3">
+          {/* Left Column: Title and CTA */}
           <div className="lg:col-span-1">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
               Frequently Asked Questions
             </h2>
+            <p className="mt-4 text-base text-gray-600">
+              Get answers to commonly asked questions
+            </p>
+            <a
+              href="/contact"
+              className="mt-6 inline-flex items-center gap-x-2 rounded-lg bg-gray-100 px-4 py-2.5 text-sm font-semibold text-gray-800 transition hover:bg-gray-200"
+            >
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gray-900 text-white">
+                <HiArrowRight className="h-4 w-4" />
+              </span>
+              <span>Contact Us</span>
+            </a>
           </div>
 
-          {/* FAQ list */}
-          <div className="lg:col-span-2">
-            <div className="space-y-1">
-              {faqData.map((faq, index) => (
-                <FaqItem
-                  key={index}
-                  isOpen={openIndex === index}
-                  onClick={() => handleToggle(index)}
-                  question={faq.question}
-                  answer={faq.answer}
-                />
-              ))}
-            </div>
+          {/* Right Column: FAQ list */}
+          <div className="space-y-4 lg:col-span-2">
+            {faqData.map((faq, index) => (
+              <FaqItem
+                key={index}
+                isOpen={openIndex === index}
+                onClick={() => handleToggle(index)}
+                question={faq.question}
+                answer={faq.answer}
+              />
+            ))}
           </div>
         </div>
       </div>

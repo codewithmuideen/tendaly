@@ -1,85 +1,99 @@
 import React from 'react';
+// Assuming you have an images constant file like this
 import images from '../constants/images';
+// This component is now defined outside of Hero for better performance.
+const FloatingMessage = ({ text, className }) => (
+  <div
+    className={`absolute bg-white/90 backdrop-blur-md border border-gray-200 shadow-lg rounded-lg px-4 py-2 text-sm text-slate-800 ${className}`}
+  >
+    {text}
+  </div>
+);
 
-const floatingMessages = [
-  {
-    text: "We care for your loved ones",
-    style: "top-1/4 left-4 sm:left-8",
-  },
-  {
-    text: "We are fast changing the frontiers on home health",
-    style: "top-8 right-4 sm:right-10",
-  },
-  {
-    text: "We care for your parents",
-    style: "bottom-20 left-6 sm:left-16",
-  },
-  {
-    text: "Your health. Our priority.",
-    style: "bottom-6 right-6 sm:right-16",
-  },
-];
-
-const Hero = ({ onScrollToFeatures }) => {
+const Hero = () => {
   return (
-  <section
-  id="hero"
-  className="relative z-0 bg-[#0097FC] w-full pb-20 px-6 md:px-12 overflow-hidden"
-  style={{ paddingTop: 'calc(var(--header-h) + 2rem)' }}   // was + 2rem → now + 4rem
->
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-16 z-10 relative">
+    // 👇 MODIFIED:
+    // 1. Uses padding on mobile (`py-20`) to create space.
+    // 2. Switches to a flex-centered layout with min-height ONLY on large screens (`lg:`).
+    // This ensures the text stacks correctly on top on mobile, leaving space at the bottom.
+    <section 
+      className="relative bg-white overflow-hidden py-20 lg:py-0 lg:flex lg:items-center lg:min-h-[70vh]"
+    >
+      {/* Optional: Faint Wavy Background Lines */}
+      <div
+        className="absolute inset-0 opacity-50 z-0 pointer-events-none"
+        style={{
+          backgroundImage: `url(${images.blue})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+        }}
+      />
 
-        {/* LEFT COLUMN */}
-        <div className="text-center lg:text-left pt-20">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-            Smarter Care <br /> Connections
-          </h1>
-          <p className="text-lg text-gray-700 mb-8 max-w-md mx-auto lg:mx-0">
-            Tendaly connects families with trusted care providers. Find care, offer care, and manage everything from your phone. It's fast, secure, and designed for African families.
-          </p>
+      <div className="relative container mx-auto px-6 z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          
+          {/* 👇 MODIFIED: 
+              - This text column is now FIRST in the code.
+              - This makes it appear on top on mobile screens by default.
+              - Removed the `order` classes as they are no longer needed.
+          */}
+          <div className="text-center lg:text-left">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black leading-tight">
+              Care for your
+              <br />
+              <span className="text-black">parents</span>
+            </h1>
 
-          <div className="flex justify-center lg:justify-start gap-4 mb-6">
-            <a href="#">
-              <img src={images.playstore} alt="Google Play" className="h-12 w-auto" />
-            </a>
-            <a href="#">
-              <img src={images.appstore} alt="App Store" className="h-12 w-auto" />
-            </a>
+            <p className="mt-4 text-lg text-slate-600">
+              Tendaly connects families with trusted care providers. Find care, offer care, and manage everything from your phone. It's fast, secure, and designed for African families.
+            </p>
+
+            <div className="mt-8 flex items-center justify-center lg:justify-start gap-4">
+              <a href="#" aria-label="Get it on Google Play">
+                <img src={images.playstore} alt="Google Play store button" className="h-12 w-auto" />
+              </a>
+              <a href="#" aria-label="Download on the App Store">
+                <img src={images.appstore} alt="Apple App store button" className="h-12 w-auto" />
+              </a>
+            </div>
           </div>
 
-          {onScrollToFeatures && (
-            <button
-              onClick={onScrollToFeatures}
-              className="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition"
-            >
-              Explore Features
-            </button>
-          )}
-        </div>
+          {/* 👇 MODIFIED: 
+              - This image column is now SECOND in the code.
+              - It will appear below the text on mobile screens.
+          */}
+          <div className="relative flex items-center justify-center">
+            <img
+              src={images.heroMockup}
+              alt="Tendaly app mockup showing care services"
+              className="w-full max-w-lg"
+            />
 
-        {/* RIGHT COLUMN */}
-        <div className="relative flex justify-center mt-10">
-          <img
-            src={images.heroMockup}
-            alt="Tendaly App Mockup"
-            className="w-full max-w-sm sm:max-w-md lg:max-w-lg drop-shadow-xl relative z-10"
-          />
-
-          {/* Floating Messages */}
-          {floatingMessages.map((msg, index) => (
-            <div
-              key={index}
-              className={`absolute ${msg.style} bg-white/90 backdrop-blur-md text-sm sm:text-base text-blue-900 px-4 py-2 rounded-full shadow-md animate-fadeIn border border-blue-200`}
-              style={{ animationDelay: `${index * 0.5}s` }}
-            >
-              {msg.text}
-            </div>
-          ))}
+            {/* 👇 MODIFIED: 
+                - Removed `hidden sm:block` from all messages.
+                - They are now visible on mobile devices.
+            */}
+            <FloatingMessage
+              text="We care for your parents"
+              className="bottom-1/4 left-0 -translate-x-1/4"
+            />
+            <FloatingMessage
+              text="We are fast changing the frontiers on home health"
+              className="top-1/4 left-3 translate-x-1/4 max-w-xs"
+            />
+            <FloatingMessage
+              text="Your health. Our priority."
+              className="top-15 -left-10" 
+            />
+            <FloatingMessage
+              text="We care for your loved ones"
+              className="bottom-1/4 -right-1"
+            />
+          </div>
+          
         </div>
       </div>
-
-      {/* Optional: Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent pointer-events-none z-0" />
     </section>
   );
 };

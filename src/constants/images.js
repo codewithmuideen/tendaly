@@ -44,6 +44,10 @@ import headerImage from "../assets/header-image.webp";
 import playstore from "../assets/store-google.svg";
 import appstore from "../assets/store-ios.svg";
 import heroMockup from "../assets/heropic.png";
+import blue from "../assets/blueBackground.jpg";
+import white from "../assets/whiteBackground.jpg";
+import sticky from "../assets/sticky.jpg";
+import sticky0 from "../assets/sticky0.jpg";
 
 
 
@@ -52,7 +56,11 @@ export default {
   benefitImage,
   headerImage,
   logo,
+  sticky,
+  sticky0,
   logo2,
+  white,
+  blue,
   sage,
   playstore,
   appstore,
