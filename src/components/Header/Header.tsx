@@ -68,19 +68,20 @@ const Header: React.FC = () => {
 
             {/* Right-side CTA + mobile toggle */}
             <div className="flex-1 flex justify-end items-center gap-6">
-            <a
+    <a
   href="#"
-  className="inline-block bg-black text-white font-bold px-5 py-2.5 rounded-full hover:bg-gray-800"
+  className="inline-block text-sm md:text-base bg-black text-white font-bold px-4 py-2 md:px-5 md:py-2.5 rounded-full hover:bg-gray-800"
 >
   Get Started
 </a>
+
 
               {/* hamburger (mobile) */}
               <button
                 className="md:hidden text-brand-dark"
                 onClick={() => setMobileMenuOpen(true)}
               >
-                <img src={images.hamburger} alt="Open menu" className="w-10 h-10" />
+                <img src={images.hamburger} alt="Open menu" className="w-8 h-8" />
               </button>
             </div>
           </div>
