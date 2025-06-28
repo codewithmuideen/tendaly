@@ -5,9 +5,10 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/solid";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";   // ⬅️ NEW
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  /** ---------- Links ---------- */
   const Links = [
     { name: "About", link: "/about" },
     { name: "Features", link: "/features" },
@@ -17,43 +18,53 @@ const Header = () => {
     { name: "Contact", link: "/contact" },
   ];
 
-  const [open, setOpen] = useState(false);      // mobile menu
-  const [showModal, setShowModal] = useState(false); // ⬅️ NEW
-  const navigate = useNavigate();               // ⬅️ NEW
+  /** ---------- State ---------- */
+  const [open, setOpen] = useState(false);        // mobile menu
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
       {/* ================= Header ================= */}
-      <div className="sticky top-10 md:top-8 bg-white/80 backdrop-blur-md z-30 border-b border-gray-200">
-        <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
+      <header className="sticky top-10 md:top-8 z-30 border-b border-gray-200 backdrop-blur-md bg-white/80">
+        <div className="relative flex items-center justify-between py-4 md:px-10 px-7 bg-white">
 
           {/* ---- Logo ---- */}
-          <div className="font-bold text-2xl flex items-center gap-1 mt-4 md:mt-0">
-            <a href="/">
-              <img src={images.logo} alt="Tendaly Logo" className="h-12" />
-            </a>
-          </div>
+          <a href="/" className="flex items-center gap-1 font-bold text-2xl">
+            <img src={images.logo} alt="Tendaly Logo" className="h-12" />
+          </a>
 
           {/* ---- Mobile menu icon ---- */}
-          <div
+          <button
             onClick={() => setOpen(!open)}
-            className="absolute right-8 top-8 md:top-6 cursor-pointer md:hidden w-9 h-9"
+            className="absolute right-6 top-6 md:hidden w-9 h-9 z-40 flex items-center justify-center"
+            aria-label={open ? "Close menu" : "Open menu"}
           >
-            {open ? <XMarkIcon /> : <Bars3BottomRightIcon />}
-          </div>
+            {open ? (
+              <XMarkIcon className="w-full h-full text-gray-800" />
+            ) : (
+              <Bars3BottomRightIcon className="w-full h-full text-gray-800" />
+            )}
+          </button>
 
           {/* ---- Nav links ---- */}
           <ul
-            className={`md:flex md:items-center absolute md:static bg-white
-                        left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500
-                        ${open ? "top-12" : "top-[-490px]"}`}
+            className={`
+              md:flex md:items-center
+              absolute md:static left-0 w-full md:w-auto
+              bg-white shadow-md md:shadow-none rounded-b-xl
+              px-9 pt-6 pb-6 md:pt-0 md:pb-0 md:px-0
+              transition-all duration-300 ease-in-out
+              ${open ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0 pointer-events-none"}
+            `}
+            style={{ top: "72px" }}   /* give breathing‑room below header */
           >
             {Links.map((link) => (
               <li key={link.name} className="md:ml-8 my-7 md:my-0 font-semibold">
                 <a
                   href={link.link}
-                  className="text-gray-800 hover:text-[#0099ff] duration-500"
-                  onClick={() => setOpen(false)}          
+                  className="text-gray-800 hover:text-[#0099ff] duration-300"
+                  onClick={() => setOpen(false)}
                 >
                   {link.name}
                 </a>
@@ -62,24 +73,22 @@ const Header = () => {
 
             {/* ---- Get Started button ---- */}
             <button
-              className="flex items-center gap-2 bg-[#0099ff] text-white md:ml-8
-                         font-semibold px-5 py-5 rounded-full duration-500 md:static"
-              onClick={() => setShowModal(true)}          /* ⬅️ OPEN MODAL */
+              className="flex items-center gap-2 bg-[#0099ff] text-white font-semibold px-5 py-3 md:py-2 rounded-full duration-300 md:ml-8"
+              onClick={() => setShowModal(true)}
             >
               Get Started <AiOutlineArrowRight className="w-4 h-4" />
             </button>
           </ul>
         </div>
-      </div>
+      </header>
 
       {/* ================= Modal ================= */}
       {showModal && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center
-                     bg-black/50 backdrop-blur-sm"
-          onClick={() => setShowModal(false)}       /* click backdrop to close */
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+          onClick={() => setShowModal(false)}
         >
-          {/* stopPropagation keeps inner clicks from closing backdrop */}
+          {/* stopPropagation prevents inner clicks from closing backdrop */}
           <div
             className="bg-white max-w-sm w-full rounded-xl p-6 shadow-xl"
             onClick={(e) => e.stopPropagation()}
@@ -87,7 +96,7 @@ const Header = () => {
             <h2 className="text-xl font-bold text-gray-800 mb-3">Coming Soon</h2>
             <p className="text-gray-600 mb-6">
               Our application is currently in development and will be launching soon.
-              Be the first to know — join our waitlist now!
+              Be the first to know — join our waitlist now!
             </p>
 
             <div className="flex justify-end gap-3">
