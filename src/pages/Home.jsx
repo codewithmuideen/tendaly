@@ -7,6 +7,7 @@ import HowItWorksCombined from '../components/HowItWorksCombined';
 import AboutTendalyPage from './AboutTendalyPage';
 import FeaturesPage from './FeaturesPage';
 import HeroComponent from '../components/HeroComponent';
+import EmpowerCareerBanner from '../components/EmpowerCareerBanner';
 
 const Home = () => (
   <>
@@ -15,6 +16,7 @@ const Home = () => (
     <AboutTendalyPage />
     <FeaturesPage />
     <HowItWorksCombined />
+    <EmpowerCareerBanner />
     <Features />
     <TestimonialSlider />
     {/* <WhyTendaly /> */}

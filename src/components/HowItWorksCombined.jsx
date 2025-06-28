@@ -114,7 +114,7 @@ const HowItWorksCombined = () => {
   How It Works
 </h2>
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-serif text-4xl font-bold tracking-tight text-indigo-900 sm:text-5xl" style={{fontFamily:'Montserrat'}}>
+          <h2 className="font-serif text-4xl font-bold tracking-tight text-indigo-900 sm:text-5xl" style={{fontFamily:'Nunito'}}>
             Choose Your Path
           </h2>
           <p className="mt-6 text-lg leading-8 text-slate-600">
