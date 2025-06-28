@@ -59,7 +59,7 @@ const Header = () => {
               md:translate-y-0 md:opacity-100 md:pointer-events-auto
               ${open ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0 pointer-events-none'}
             `}
-            style={{ top: '72px' }}
+            style={{ top: '82px' }}
           >
             {Links.map((link) => (
               <li key={link.name} className="md:ml-8 my-7 md:my-0 font-semibold">
@@ -74,12 +74,15 @@ const Header = () => {
             ))}
 
             {/* ---- Get Started Button ---- */}
-            <button
-              className="flex items-center gap-2 bg-[#0099ff] text-white font-semibold px-5 py-3 md:py-2 rounded-full duration-300 md:ml-8"
-              onClick={() => setShowModal(true)}
-            >
-              Get Started <AiOutlineArrowRight className="w-4 h-4" />
-            </button>
+         {/* =========================================================
+    *   Large & Prominent "Get Started" Button (Recommended)
+    * ====================================================== */}
+<button
+  className="flex items-center gap-3 bg-[#0099ff] text-white text-lg font-bold px-6 py-3 rounded-full duration-300 hover:bg-[#007acc] transform hover:scale-105 md:ml-8"
+  onClick={() => setShowModal(true)}
+>
+  Get Started <AiOutlineArrowRight className="w-5 h-5" />
+</button>
           </ul>
         </div>
       </header>
