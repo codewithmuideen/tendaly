@@ -110,6 +110,9 @@ const HowItWorksCombined = () => {
     <section className="bg-white font-sans py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
+        <h2 className="text-2xl font-bold bg-gradient-to-r from-[#111827] via-pink-500 to-orange-500 bg-clip-text text-transparent mb-5">
+  How It Works
+</h2>
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-serif text-4xl font-bold tracking-tight text-indigo-900 sm:text-5xl" style={{fontFamily:'Montserrat'}}>
             Choose Your Path

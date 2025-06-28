@@ -1,15 +1,17 @@
 import FaqSection from '../components/FaqSection';
 import Features from '../components/Features';
-import Hero from '../components/Hero';
+// import Hero from '../components/Hero';
 import TestimonialSlider from '../components/TestimonialSlider';
 // import WhyTendaly from '../components/WhyTendaly';
 import HowItWorksCombined from '../components/HowItWorksCombined';
 import AboutTendalyPage from './AboutTendalyPage';
 import FeaturesPage from './FeaturesPage';
+import HeroComponent from '../components/HeroComponent';
 
 const Home = () => (
   <>
-    <Hero />
+    {/* <Hero /> */}
+<HeroComponent />
     <AboutTendalyPage />
     <FeaturesPage />
     <HowItWorksCombined />

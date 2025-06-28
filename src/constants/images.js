@@ -29,9 +29,20 @@ import skyblue00 from "../assets/skyblue00.jpg";
 import skyblue0 from "../assets/skyblue0.jpg";
 import skyblue from "../assets/skyblue.jpg";
 import sticky22 from "../assets/sticky22.webp";
-
+import care from "../assets/care.jpg";
+import careb from "../assets/careb.jpg";
+import herosection from "../assets/hero.png";
+import herome from "../assets/herome.png";
+import blackplay from "../assets/blackplay.png";
+import blackios from "../assets/blackios.png";
 
 export default {
+  herosection,
+  herome,
+  blackios,
+  blackplay,
+  care,
+  careb,
   skyblue00,
   skyblue0,
   skyblue,

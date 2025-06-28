@@ -6,37 +6,69 @@ const faqData = [
   {
     question: 'What is Tendaly?',
     answer:
-      'Tendaly is a marketplace and mobile app that connects care seekers with thoroughly vetted, background-checked caregivers for in-home help, companionship, and specialized support.',
+      'Tendaly is a care matching platform that connects caregivers with people who need care services such as senior care, adult care, childcare, pet care, and wellness support or special needs assistance.',
   },
   {
-    question: 'How does the AI-powered matching work?',
+    question: 'How do I find a caregiver on Tendaly?',
     answer:
-      'Our machine-learning engine analyses your care needs—skills required, schedule, location, language, budget—and instantly ranks the best-fit caregivers. You’ll always see the most relevant profiles first.',
+      'Simply sign up, specify the type of care you need, and browse available caregivers in your location. You can view profiles, read reviews, and book directly through the app.',
   },
   {
-    question: 'Are caregivers on Tendaly screened?',
+    question: 'Are the caregivers verified?',
     answer:
-      'Yes. Every provider completes identity verification, background checks, and credential validation before appearing in search results. We also review references and require up-to-date certifications for specialized care.',
+      'Yes. All caregivers on Tendaly undergo a thorough vetting process that includes background checks, identity verification, and experience validation.',
   },
   {
-    question: 'How do bookings and payments happen?',
+    question: 'Can I schedule care on short notice?',
     answer:
-      'Once you find the right caregiver, you can chat securely in-app, confirm hours, and pay by card or wallet. Funds are held in escrow and released to the caregiver only after the visit is completed.',
+      'Yes. Tendaly allows you to book caregivers for immediate needs or schedule them in advance, depending on caregiver availability.',
   },
   {
-    question: 'Can I get emergency or backup care?',
+    question: 'How does payment work?',
     answer:
-      'Absolutely. Toggle the “Urgent Care” filter or tap the red lightning icon to see providers who have enabled instant bookings for last-minute needs—often within two hours.',
+      'All payments are handled securely through the Tendaly platform. You’ll see the caregiver’s hourly or session rate upfront and can pay directly through the app after the service is completed.',
   },
   {
-    question: 'Is Tendaly free to join?',
+    question: 'What if I have a complaint or issue with a caregiver?',
     answer:
-      'Creating an account is free. Caregivers set their hourly rates; Tendaly adds a small service fee (displayed transparently at checkout) that covers payment processing and support.',
+      'Our support team is available to help resolve any issues. You can also report concerns directly through the app, and we will take appropriate action.',
   },
   {
-    question: 'Which devices support Tendaly?',
+    question: 'Is Tendaly available nationwide?',
     answer:
-      'Our iOS and Android apps are in open beta (links on the home page). A full PWA works across modern browsers, so you can also manage bookings on desktop.',
+      'Tendaly is currently available in selected regions and rapidly expanding. You can check availability by entering your location in the app.',
+  },
+  {
+    question: 'Can I cancel or reschedule a booking?',
+    answer:
+      'Yes, you can cancel or reschedule a booking within the app. Each caregiver may have specific cancellation policies, which will be visible before you confirm your booking.',
+  },
+  {
+    question: 'What happens if I’m not satisfied with the service?',
+    answer:
+      "Tendaly prioritizes your satisfaction. If you're not happy with the service provided, please contact our support team immediately. We will investigate the issue and take appropriate action.",
+  },
+  {
+    question: 'Is Tendaly available in my location?',
+    answer:
+      'Tendaly is expanding quickly. You can check availability by entering your ZIP code or city in the app or on our website.',
+  },
+  {
+    question: 'Can caregivers use the platform to find jobs?',
+    answer:
+      'Absolutely. Tendaly is also a platform for caregivers looking to offer their services. After passing our vetting process, caregivers can list their availability, set their rates, and get matched with care seekers.',
+  },
+  {
+    question: 'What types of care can I find on Tendaly?',
+    answer:
+      `Tendaly supports a wide range of care services, including:\n
+● Senior Care\n
+● Adult Care\n
+● Child Care\n
+● Special needs care\n
+● Wellness support\n
+● Post-surgery or recovery assistance\n
+● Pet Care`,
   },
 ];
 

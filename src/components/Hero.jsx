@@ -20,9 +20,10 @@ const Hero = () => {
       >
         {/* Background pattern */}
         <div
-          className="absolute inset-0 opacity-50 z-0 pointer-events-none"
+          className="absolute inset-0 z-0 pointer-events-none"
           style={{
-            backgroundImage: `url(${images.blue2})`,
+            // backgroundImage: `url(${images.blue2})`,
+            background:'#0099ff',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
@@ -36,13 +37,14 @@ const Hero = () => {
             {/* Text content */}
             <div className="text-center lg:text-left">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black leading-tight">
-                Care for your
+                Care for everyone
                 <br />
-                <span className="text-black">parents</span>
+                <span className="text-black"></span>
               </h1>
 
-              <p className="mt-4 text-lg text-slate-600">
-                Tendaly connects families with trusted care providers. Find care, offer care, and manage everything from your phone. It's fast, secure, and designed for African families.
+              <p className="mt-4 text-lg text-black">
+                Tendaly connects families with trusted care providers. Find care, offer care, 
+                and manage everything from your phone. It's fast, secure, and designed for African families.
               </p>
 
               <div className="mt-8 flex items-center justify-center lg:justify-start gap-4">
@@ -59,7 +61,7 @@ const Hero = () => {
             {/* Image + Floating messages */}
             <div className="relative flex items-center justify-center">
               <img
-                src={images.heroMockup}
+                src={images.herosection}
                 alt="Tendaly app mockup showing care services"
                 className="w-full max-w-lg"
               />

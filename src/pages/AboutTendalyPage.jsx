@@ -5,22 +5,24 @@ const AboutTendalyPage = () => {
   return (
     <div className="bg-white bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem]">
       <section className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
-
+  <h2 className="text-2xl font-bold bg-gradient-to-r from-[#111827] via-pink-500 to-orange-500 bg-clip-text text-transparent mb-5">
+  About Us 
+</h2>
         {/* ---------- Top / Hero ---------- */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-14 items-center">
           {/* -- Text -- */}
           <div className="lg:pr-8 order-2 lg:order-1">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-              We're changing the way people connect
+              We're changing the way people connect to care
             </h1>
             <p className="mt-6 text-base sm:text-lg text-gray-600 leading-relaxed">
-              Tendaly is a modern platform designed to transform the caregiving
-              and personal services industry by seamlessly connecting clients—
-              from individuals with disabilities to families seeking home care—
-              with trusted professionals. Built with a strong focus on user
-              experience, Tendaly simplifies scheduling, communication, and
-              service delivery to ensure a stress‑free experience for both
-              clients and providers.
+              Tendaly is a care-focused and customer-centered platform designed to seamlessly connect
+caregivers with individuals and families in need of compassionate, professional support.
+Whether it&#39;s for elderly care, childcare, special needs, or in-home assistance, Tendaly brings
+trusted care to your doorstep. Our platform makes it easy to find, book, and manage care
+services tailored to your needs and schedule. At Tendaly, we believe that quality care should be
+accessible, reliable, and built on trust because everyone deserves to be cared for with dignity
+and respect.
             </p>
           </div>
 
@@ -70,19 +72,20 @@ const AboutTendalyPage = () => {
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Our mission</h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              To seamlessly connect clients with trusted, compassionate care
-              professionals by providing a simple, reliable, and user‑centric
-              platform that streamlines scheduling, communication, and service
-              delivery for a stress‑free experience.
+              At Tendaly, deliver compassionate, high-quality care by putting people first— always. We are
+care-focused, and customer-centered, committed to empowering families and care providers
+through technology that’s built on trust, dignity, and real human needs. Whether it’s for a loved
+one or a livelihood, we connect people to care that matters.
             </p>
           </div>
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Our vision</h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              To create a world where finding and managing care is effortless
-              and empowering, transforming the personal services industry by
-              fostering meaningful, human‑centered connections built on trust,
-              warmth, and innovation.
+              At Tendaly, we envision becoming the most trusted global platform, where finding trusted
+care—for seniors, children, adults, pets, and personal well-being—is simple, safe and
+personalized. Our goal is to become the go-to platform that empowers families and care
+providers alike, using smart technology to bridge the gap between everyday needs and
+exceptional care. Wherever care is needed, Tendaly is there.
             </p>
           </div>
         </div>
