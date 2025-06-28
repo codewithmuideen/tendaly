@@ -40,15 +40,45 @@ import playstore from "../assets/store-google.svg";
 import appstore from "../assets/store-ios.svg";
 import heroMockup from "../assets/heropic.png";
 import blue from "../assets/blueBackground.jpg";
+import blue2 from "../assets/blue2.jpg";
 import white from "../assets/whiteBackground.jpg";
 import sticky from "../assets/sticky.jpg";
 import sticky0 from "../assets/sticky0.jpg";
+import screen0 from "../assets/screen-0.webp";
+import screen1 from "../assets/screen00.jpg";
+import screen2 from "../assets/screen-2.jpg";
+import screen3 from "../assets/screen-3.jpg";
+import screen4 from "../assets/screen-4.jpg";
+import screen5 from "../assets/screen-5.webp";
+import screen6 from "../assets/screen-6.webp";
+import screen7 from "../assets/screen-7.webp";
+import sticky1 from "../assets/sticky22.webp";
+import sticky10 from "../assets/sticky10.jpg";
+import sticky9 from "../assets/sticky9.jpg";
+import sticky8 from "../assets/sticky8.jpg";
+import sticky7 from "../assets/sticky7.jpg";
+
+
 
 
 
 
 export default {
+  sticky1,
+  sticky10,
+  sticky9,
+  sticky8,
+  sticky7,
+  screen0,
+  screen1,
+  screen2,
+  screen3,
+  screen4,
+  screen5,
+  screen6,
+  screen7,
   logo,
+  blue2,
   sticky,
   sticky0,
   logo2,

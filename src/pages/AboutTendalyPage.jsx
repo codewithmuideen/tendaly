@@ -1,121 +1,92 @@
-// src/pages/AboutTendalyPage.jsx
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-// 👇 CORRECTED: Icons have been updated to FaPlus and FaMinus
-import { FaUsers, FaBullseye, FaEye, FaPlus, FaMinus } from 'react-icons/fa';
+import React from 'react';
+import images from '../constants/images';
 
-// --- Reusable Accordion Item Component ---
-const AccordionItem = ({ data, isOpen, onClick }) => {
-  const { icon, title, text } = data;
-
-  return (
-    <div className="border-b border-gray-200 last:border-b-0">
-      <motion.header
-        initial={false}
-        onClick={onClick}
-        className="flex justify-between items-center p-6 cursor-pointer hover:bg-blue-50/50 transition-colors"
-      >
-        <div className="flex items-center gap-4">
-          <span className={`text-2xl ${isOpen ? 'text-[#0099ff]' : 'text-[#0b5aad]'}`}>{icon}</span>
-          <h3 className={`text-xl font-semibold ${isOpen ? 'text-[#0099ff]' : 'text-slate-800'}`}>
-            {title}
-          </h3>
-        </div>
-        
-        {/* 👇 MODIFIED: Plus/Minus Icon with Animation */}
-        <div className="relative w-6 h-6 flex items-center justify-center">
-          <AnimatePresence initial={false} mode="wait">
-            <motion.span
-              key={isOpen ? 'minus' : 'plus'} // The key is crucial for AnimatePresence to detect the change
-              initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              exit={{ opacity: 0, scale: 0.5, rotate: 90 }}
-              transition={{ duration: 0.2 }}
-              className="absolute"
-            >
-              {isOpen ? (
-                <FaMinus className="text-lg text-[#0099ff]" />
-              ) : (
-                <FaPlus className="text-lg text-slate-500" />
-              )}
-            </motion.span>
-          </AnimatePresence>
-        </div>
-      </motion.header>
-
-      {/* AnimatePresence allows the component to animate out when removed from the tree */}
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.section
-            key="content"
-            initial="collapsed"
-            animate="open"
-            exit="collapsed"
-            variants={{
-              open: { opacity: 1, height: 'auto' },
-              collapsed: { opacity: 0, height: 0 },
-            }}
-            transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
-            className="overflow-hidden"
-          >
-            <div className="px-6 pb-6">
-              <p className="text-slate-600 leading-relaxed">{text}</p>
-            </div>
-          </motion.section>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
-
-
-// --- The Main About Page Component ---
 const AboutTendalyPage = () => {
-  // We'll have the first item open by default (index 0)
-  const [openIndex, setOpenIndex] = useState(0);
-
-  const contentData = [
-    {
-      icon: <FaUsers />,
-      title: 'Who We Are',
-      text: `Tendaly is a modern platform designed to transform the caregiving and personal services industry by seamlessly connecting clients, from individuals with disabilities to families seeking home care services, with trusted, compassionate professionals. Built with a strong focus on user experience, Tendaly simplifies scheduling, communication, and service delivery to ensure a smooth, stress-free experience for both clients and providers. Whether it’s in-home care or wellness services, Tendaly combines warmth, reliability, and innovation to support meaningful, human-centered.`,
-    },
-    {
-      icon: <FaBullseye />,
-      title: 'Our Mission',
-      text: 'To empower every caregiver with intuitive technology and a supportive community, transforming the care experience by simplifying complexities and fostering deeper connections between providers, clients, and their families.',
-    },
-    {
-      icon: <FaEye />,
-      title: 'Our Vision',
-      text: 'To create a world where providing and receiving care is a seamless, transparent, and collaborative experience, supported by a global standard of technology that champions empathy, efficiency, and human connection.',
-    },
-  ];
-  
-  const handleItemClick = (index) => {
-    // If the clicked item is already open, close it by setting index to null. Otherwise, open the new one.
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
-    <div className="min-h-screen bg-[#f2f4f7] py-12 sm:py-20 px-4 flex flex-col items-center">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#0b5aad]">About Tendaly</h1>
-        <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-          The purpose, passion, and people behind our mission to revolutionize the care industry.
-        </p>
-      </div>
-      
-      <div className="w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-        {contentData.map((item, index) => (
-          <AccordionItem
-            key={index}
-            data={item}
-            isOpen={openIndex === index}
-            onClick={() => handleItemClick(index)}
-          />
-        ))}
-      </div>
+    <div className="bg-white bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem]">
+      <section className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+
+        {/* ---------- Top / Hero ---------- */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-14 items-center">
+          {/* -- Text -- */}
+          <div className="lg:pr-8 order-2 lg:order-1">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+              We're changing the way people connect
+            </h1>
+            <p className="mt-6 text-base sm:text-lg text-gray-600 leading-relaxed">
+              Tendaly is a modern platform designed to transform the caregiving
+              and personal services industry by seamlessly connecting clients—
+              from individuals with disabilities to families seeking home care—
+              with trusted professionals. Built with a strong focus on user
+              experience, Tendaly simplifies scheduling, communication, and
+              service delivery to ensure a stress‑free experience for both
+              clients and providers.
+            </p>
+          </div>
+
+          {/* -- Image Collage -- */}
+          <div className="relative w-full h-72 sm:h-[420px] lg:h-[550px] overflow-hidden order-1 lg:order-2">
+            {/* Background blob */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-[340px] h-[340px] sm:w-[500px] sm:h-[500px] bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-purple-200/30 via-pink-200/10 to-transparent blur-3xl" />
+            </div>
+
+            {/* Individual photos */}
+            {/* 1 */}
+            <img
+              src={images.sticky0}
+              alt="Woman working on a laptop"
+              className="absolute top-6 sm:top-12 left-2 sm:left-0 w-32 sm:w-44 lg:w-56 rounded-2xl shadow-lg -rotate-2 z-20"
+            />
+            {/* 2 */}
+            <img
+              src={images.sticky10}
+              alt="Man using a tablet"
+              className="absolute top-2 sm:top-4 right-4 sm:right-8 w-36 sm:w-48 lg:w-64 rounded-2xl shadow-lg rotate-1 z-30"
+            />
+            {/* 3 */}
+            <img
+              src={images.sticky9}
+              alt="Two women collaborating"
+              className="absolute top-1/2 -translate-y-1/3 right-0 w-32 sm:w-40 lg:w-60 rounded-2xl shadow-lg rotate-3 z-20"
+            />
+            {/* 4 – hidden on very small devices */}
+            <img
+              src={images.sticky7}
+              alt="Man presenting"
+              className="hidden sm:block absolute bottom-12 right-16 w-28 sm:w-40 lg:w-52 rounded-2xl shadow-lg -rotate-3 z-10"
+            />
+            {/* 5 – hidden on very small devices */}
+            <img
+              src={images.sticky8}
+              alt="Team collaborating"
+              className="hidden sm:block absolute bottom-0 left-8 w-36 sm:w-48 lg:w-64 rounded-2xl shadow-lg rotate-2 z-10"
+            />
+          </div>
+        </div>
+
+        {/* ---------- Mission & Vision ---------- */}
+        <div className="mt-20 sm:mt-24 lg:mt-32 grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-20">
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Our mission</h2>
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              To seamlessly connect clients with trusted, compassionate care
+              professionals by providing a simple, reliable, and user‑centric
+              platform that streamlines scheduling, communication, and service
+              delivery for a stress‑free experience.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Our vision</h2>
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              To create a world where finding and managing care is effortless
+              and empowering, transforming the personal services industry by
+              fostering meaningful, human‑centered connections built on trust,
+              warmth, and innovation.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

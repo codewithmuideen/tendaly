@@ -18,7 +18,7 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import AboutTendalyPage from './pages/AboutTendalyPage';
 import WaitlistBanner from './components/WaitlistBanner';
-import HowItWorksCombined from './HowItWorksCombined';
+import HowItWorksCombined from './components/HowItWorksCombined';
 import Testimonials from './pages/Testimonials';
 import FeaturesPage from './pages/FeaturesPage';
 

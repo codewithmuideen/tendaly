@@ -1,47 +1,65 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import styles from './style.module.scss'; // SCSS Module
-import images from '../constants/images'; // Your images object
+import styles from './style.module.scss';
 
+// --- Data Section ---
+// Using placeholder images as the original 'images' object was not provided.
+// Added unique URLs for each placeholder.
 const featuresData = [
   {
-    title: 'Contact Management',
-    heading: 'Build powerful customer relationships',
+    title: 'AI-Powered Matching',
+    heading: 'Smart caregiver matching with Tendaly',
     description:
-      'Every client interaction is available in a single view, helping your team understand client status, plan engagements, and deliver top customer experiences.',
-    image: images.featureContactManagement,
+      'Our intelligent system matches care seekers with the most suitable providers based on needs, availability, and preferences — ensuring the right fit every time.',
+    image: 'https://placehold.co/800x600/3B82F6/FFFFFF?text=AI+Matching',
     url: '#',
   },
   {
-    title: 'Tasks & Calendar',
-    heading: 'Your to-do list; controlled',
+    title: 'Secure Messaging',
+    heading: 'Private, secure conversations',
     description:
-      "Start and end your working day knowing what tasks you've got to tackle. And if there's too much on, manually assign a task, or set up automations to delegate.",
-    image: images.featureTasksCalendar,
+      'Communicate safely within Tendaly. Our encrypted messaging keeps discussions confidential and compliant.',
+    image: 'https://placehold.co/800x600/10B981/FFFFFF?text=Messaging',
     url: '#',
   },
   {
-    title: 'Sales Pipeline',
-    heading: 'Close more deals, faster',
+    title: 'Background-Checked Providers',
+    heading: 'Trusted professionals, every time',
     description:
-      'Seize control of your sales pipeline, forecast more accurately, and understand deal status in one dashboard.',
-    image: images.featureSalesPipeline,
+      'Every caregiver on Tendaly is thoroughly vetted, so families can feel confident in their choice of care.',
+    image: 'https://placehold.co/800x600/8B5CF6/FFFFFF?text=Vetting',
     url: '#',
   },
   {
-    title: 'Project Management',
-    heading: 'Deliver more, on time, within scope',
+    title: 'Booking & Payments',
+    heading: 'Simple, flexible scheduling',
     description:
-      "Onboard, manage, and deliver for your customers when they say 'yes'. Smash silos, stay on track, and collaborate easily with your team.",
-    image: images.featureProjectManagement,
+      'Book care with just a few taps. Tendaly makes it easy to manage appointments and pay securely through the app.',
+    image: 'https://placehold.co/800x600/F97316/FFFFFF?text=Booking',
     url: '#',
   },
   {
-    title: 'Sales Analytics',
-    heading: 'Game-changing insights at your fingertips',
+    title: 'Ratings & Reviews',
+    heading: 'Build trust through feedback',
     description:
-      'Detect deals close to closure and take action. Consult customers who need support. Project pipeline to analyze business growth - all in one dashboard.',
-    image: images.featureSalesAnalytics,
+      'Care seekers can read verified reviews and ratings, helping everyone make informed decisions.',
+    image: 'https://placehold.co/800x600/EC4899/FFFFFF?text=Reviews',
+    url: '#',
+  },
+  {
+    title: 'Emergency & Backup Care',
+    heading: 'Support when you need it most',
+    description:
+      'Unexpected situation? Tendaly helps you find urgent care providers in your area, fast.',
+    image: 'https://placehold.co/800x600/EF4444/FFFFFF?text=Emergency',
+    url: '#',
+  },
+  {
+    title: 'Location-Based Search',
+    heading: 'Find nearby providers in seconds',
+    description:
+      'Use Tendaly’s GPS-enabled search to connect with caregivers near your home or loved one’s location.',
+    image: 'https://placehold.co/800x600/06B6D4/FFFFFF?text=Location',
     url: '#',
   },
 ];
@@ -53,22 +71,22 @@ const Features = () => {
     offset: ['start start', 'end end'],
   });
 
-  const colors = ['#fff', '#fff', '#fff', '#fff', '#fff'];
+  // A more vibrant and varied color palette for the cards.
+  const colors = ['#eff6ff', '#f0fdf4', '#f5f3ff', '#fff7ed', '#fdf2f8', '#fef2f2', '#ecfeff'];
 
   return (
+    // It's good practice to add a className for the main wrapper for styling.
     <main ref={container} className={styles.mainContainer}>
       {featuresData.map((feature, i) => {
+        // This calculates the scale of the card when it's "at rest" in the stack.
         const targetScale = 1 - (featuresData.length - i) * 0.05;
+        
         return (
           <Card
             key={`feature_${i}`}
             i={i}
-            title={feature.title}
-            heading={feature.heading}
-            description={feature.description}
-            src={feature.image}
-            url={feature.url}
-            color={colors[i % colors.length]}
+            {...feature} // Use spread operator for cleaner prop passing
+            color={colors[i % colors.length]} // Safely cycle through colors
             progress={scrollYProgress}
             range={[i / featuresData.length, 1]}
             targetScale={targetScale}
@@ -84,7 +102,7 @@ const Card = ({
   title,
   heading,
   description,
-  src,
+  image, // Renamed from 'src' for clarity
   url,
   color,
   progress,
@@ -93,6 +111,7 @@ const Card = ({
 }) => {
   const cardContainer = useRef(null);
 
+  // This hook creates a parallax effect for the image as the card scrolls into view.
   const { scrollYProgress: cardScrollYProgress } = useScroll({
     target: cardContainer,
     offset: ['start end', 'start start'],
@@ -107,7 +126,7 @@ const Card = ({
         style={{
           backgroundColor: color,
           scale,
-          top: `calc(-5vh + ${i * 25}px)`,
+          top: `calc(-5vh + ${i * 25}px)`, // Stacks cards with a 25px offset
         }}
         className={styles.card}
       >
@@ -129,7 +148,9 @@ const Card = ({
                   >
                     <path
                       d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z"
-                      fill="white"
+                      // Use a contrasting color instead of white for visibility.
+                      // 'currentColor' is often a good choice as it can be set via CSS.
+                      fill="currentColor" 
                     />
                   </svg>
                 </span>
@@ -138,7 +159,8 @@ const Card = ({
           </div>
           <div className={styles.imageContainer}>
             <motion.div className={styles.inner} style={{ scale: imageScale }}>
-              <img src={src} alt={title} />
+              {/* Use the 'image' prop and ensure 'alt' text is descriptive */}
+              <img src={image} alt={`Visual representation of ${title}`} />
             </motion.div>
           </div>
         </div>

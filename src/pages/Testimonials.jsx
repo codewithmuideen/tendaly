@@ -87,7 +87,7 @@ const Testimonials = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-serif text-4xl font-bold tracking-tight text-indigo-900 sm:text-5xl">
+          <h2 className="font-serif text-4xl font-bold tracking-tight text-indigo-900 sm:text-5xl" style={{fontFamily:'Montserrat'}}>
             Trusted by Our Community
           </h2>
           <p className="mt-6 text-lg leading-8 text-slate-600">

@@ -75,7 +75,7 @@ const FaqSection = () => {
     setOpenIndex(openIndex === index ? null : index);
 
   return (
-    <section className="bg-white font-sans">
+    <section className="bg-white font-sans" id='faq'>
       <div className="mx-auto max-w-7xl rounded-lg border border-gray-200 px-6 py-16 sm:py-24 lg:px-8">
         <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-3">
           {/* Left Column: Title and CTA */}

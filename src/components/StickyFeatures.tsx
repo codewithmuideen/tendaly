@@ -5,36 +5,43 @@ import images from '../constants/images';
 
 const featuresData = [
   {
-    title: 'Contact Management',
-    heading: 'Build powerful customer relationships',
-    description: 'Every client interaction is available in a single view, helping your team understand client status, plan engagements, and deliver top customer experiences.',
-    image: images.featureContactManagement,
+    title: 'AI-powered Matching',
+    // icon: <FaBrain className="text-[#0099ff] w-6 h-6" />,
+    description: 'Smart technology helps connect families with the best-fit care providers.',
+    image: images.sticky0,
   },
   {
-    title: 'Tasks & Calendar',
-    heading: 'Your to-do list; controlled',
-    description: "Start and end your working day knowing what tasks you've got to tackle. And if there's too much on, manually assign a task, or set up automations to delegate.",
-    image: images.featureTasksCalendar,
+    title: 'Secure Messaging',
+    // icon: <FaShieldAlt className="text-[#0b5aad] w-6 h-6" />,
+    description: 'Chat with care providers directly through a secure channel.',
+    image: images.sticky10,
   },
   {
-    title: 'Sales Pipeline',
-    heading: 'Close more deals, faster',
-    description: 'Seize control of your sales pipeline, forecast more accurately, and understand deal status in one dashboard.',
-    image: images.featureSalesPipeline,
+    title: 'Background-checked Providers',
+    // icon: <FaUserCheck className="text-[#ff7b89] w-6 h-6" />,
+    description: 'All care providers are vetted and background-checked for peace of mind.',
+    image: images.sticky9,
   },
   {
-    title: 'Project Management',
-    heading: 'Deliver more, on time, within scope',
-    description: "Onboard, manage, and deliver for your customers when they say 'yes'. Smash silos, stay on track, and collaborate easily with your team.",
-    image: images.featureProjectManagement,
+    title: 'Booking & Payment',
+    // icon: <FaCalendarCheck className="text-[#0099ff] w-6 h-6" />,
+    description: 'Schedule care and handle payments securely from your dashboard.',
+    image: images.sticky7,
   },
   {
-    title: 'Sales Analytics',
-    heading: 'Game-changing insights at your fingertips',
-    description: 'Detect deals close to closure and take action. Consult customers who need support. Project pipeline to analyze business growth - all in one dashboard.',
-    image: images.featureSalesAnalytics,
+    title: 'User Ratings & Reviews',
+    // icon: <FaStar className="text-[#f2c94c] w-6 h-6" />,
+    description: 'Make informed decisions with provider ratings and real customer feedback.',
+    image: images.sticky8,
+  },
+  {
+    title: 'Location-based Search',
+    // icon: <FaMapMarkedAlt className="text-[#0b5aad] w-6 h-6" />,
+    description: 'Find nearby caregivers using geolocation and search filters.',
+    image: images.sticky0,
   },
 ];
+
 
 const FeatureCard = ({ title, heading, description, index, total, progress }: any) => {
   const opacity = useTransform(

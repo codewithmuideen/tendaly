@@ -9,6 +9,16 @@ export default {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
       },
+      theme: {
+    extend: {
+      colors: {
+        'sky-blue': '#00A9E0',
+        'rich-blue': '#0B5AAD',
+        'cloud-gray': '#F2F4F7',
+        'rose-coral': '#FF7B89',
+      },
+    },
+  },
       colors: {
         'sky-blue': '#0099ff',
         'rich-blue': '#0b5aad',

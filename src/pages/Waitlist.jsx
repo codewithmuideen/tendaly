@@ -1,82 +1,75 @@
-// src/pages/Waitlist.jsx
 import React from 'react';
 import { FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 
 const Waitlist = () => {
-  // A simple handler to prevent the form from reloading the page
   const handleSubmit = (event) => {
     event.preventDefault();
-    // In a real application, you would handle the form submission here,
-    // for example, by sending the data to an API endpoint.
     console.log('Form submitted!');
     alert('Thank you for joining our waitlist!');
   };
 
   return (
-    // Main container: full-screen, dark background, and centers content vertically and horizontally
-    <section className="bg-black min-h-screen flex items-center justify-center p-4">
-      <div className="w-full max-w-md mx-auto text-center">
-        
-        {/* Headline */}
-        <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-8">
-          Get updates on our product development
-        </h1>
+    <section className="min-h-screen bg-[#F2F4F7] flex items-center justify-center px-4 py-16">
+      <div className="w-full max-w-xl bg-white shadow-xl rounded-2xl p-8 sm:p-10 relative overflow-hidden">
+        {/* Gradient background bubble */}
+        <div className="absolute -top-10 -left-10 w-52 h-52 bg-gradient-to-br from-[#0099FF] to-[#0B5AAD] opacity-10 rounded-full blur-3xl z-0" />
+
+        {/* Header */}
+        <div className="relative z-10 text-center mb-8">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-[#0B5AAD] mb-2">
+            Join the Tendaly Waitlist
+          </h1>
+          <p className="text-gray-600 text-base">
+            Be the first to know when we launch.
+          </p>
+        </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
           <input
             type="text"
             name="name"
-            placeholder="My name is"
+            placeholder="Your name"
             required
-            className="w-full bg-gray-900 text-white placeholder-gray-500 px-4 py-3 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            aria-label="Your Name"
+            className="w-full bg-[#F2F4F7] text-gray-800 placeholder-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0099FF]"
           />
           <input
             type="text"
             name="role"
-            placeholder="Tell us what you do (role title)"
+            placeholder="What do you do? (e.g., caregiver, parent)"
             required
-            className="w-full bg-gray-900 text-white placeholder-gray-500 px-4 py-3 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            aria-label="Your Role Title"
+            className="w-full bg-[#F2F4F7] text-gray-800 placeholder-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0099FF]"
           />
           <input
             type="email"
             name="email"
-            placeholder="And my email address"
+            placeholder="Email address"
             required
-            className="w-full bg-gray-900 text-white placeholder-gray-500 px-4 py-3 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0099FF]"
-            aria-label="Your Email Address"
+            className="w-full bg-[#F2F4F7] text-gray-800 placeholder-gray-500 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0099FF]"
           />
           <button
             type="submit"
-            className="w-full bg-[#0099FF] text-white font-semibold py-3 rounded-md hover:bg-[#0099FF] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#0099FF] focus:ring-offset-2 focus:ring-offset-black"
+            className="w-full bg-[#0099FF] text-white font-semibold py-3 rounded-lg hover:bg-[#0B5AAD] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0099FF]"
           >
-            Submit
+            Join Waitlist
           </button>
         </form>
 
-        {/* Separator and Social Links */}
-        <div className="mt-12">
-          <div className="border-t border-gray-800 w-full max-w-xs mx-auto"></div>
-          <div className="mt-6 flex flex-col items-center gap-4">
-            <p className="text-gray-500 text-sm">
-              Reach us on our Social handles:
-            </p>
-            <div className="flex items-center gap-6">
-              <a href="#" aria-label="Instagram" className="text-gray-400 hover:text-white transition-colors">
-                <FaInstagram size={20} />
-              </a>
-              <a href="#" aria-label="Twitter" className="text-gray-400 hover:text-white transition-colors">
-                <FaTwitter size={20} />
-              </a>
-              <a href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors">
-                <FaLinkedinIn size={20} />
-              </a>
-            </div>
+        {/* Divider */}
+        <div className="mt-10 border-t border-gray-200 pt-6 relative z-10 text-center">
+          <p className="text-gray-500 text-sm mb-4">Follow us for updates</p>
+          <div className="flex justify-center gap-6">
+            <a href="#" aria-label="Instagram" className="text-[#FF7B89] hover:text-[#0B5AAD] transition-colors">
+              <FaInstagram size={22} />
+            </a>
+            <a href="#" aria-label="Twitter" className="text-[#0099FF] hover:text-[#0B5AAD] transition-colors">
+              <FaTwitter size={22} />
+            </a>
+            <a href="#" aria-label="LinkedIn" className="text-[#0B5AAD] hover:text-[#FF7B89] transition-colors">
+              <FaLinkedinIn size={22} />
+            </a>
           </div>
         </div>
-
       </div>
     </section>
   );
