@@ -137,7 +137,7 @@ const Card = ({
             <p>{description}</p>
             <span>
               <a href={url} target="_blank" rel="noopener noreferrer">
-                <span>
+                <span  style={{fontFamily:'Nunito'}}>
                   See more
                   <svg
                     width="34"

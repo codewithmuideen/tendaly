@@ -131,7 +131,7 @@ const BecomeProvider = () => {
         <section className="py-20 sm:py-28 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16 max-w-3xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 font-serif" style={{fontFamily:'Montserrat'}}>Your Platform for Success</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 font-serif"  style={{fontFamily:'Nunito'}}>Your Platform for Success</h2>
               <p className="text-lg text-slate-600 mt-4">We provide the tools, support, and flexibility you need to build a thriving caregiving career.</p>
             </div>
             
@@ -170,7 +170,7 @@ const BecomeProvider = () => {
         <section className="py-20 sm:py-28 bg-indigo-700">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white font-serif" style={{fontFamily:'Montserrat'}}>Getting Started is Easy</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white font-serif"  style={{fontFamily:'Nunito'}}>Getting Started is Easy</h2>
             </div>
             <div className="relative max-w-2xl mx-auto">
               <div className="absolute left-10 top-0 h-full w-0.5 bg-indigo-600" />
@@ -187,7 +187,7 @@ const BecomeProvider = () => {
         <section className="py-20 sm:py-28 bg-slate-50">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 font-serif" style={{fontFamily:'Montserrat'}}>Trusted by Providers Like You</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 font-serif"  style={{fontFamily:'Nunito'}}>Trusted by Providers Like You</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {testimonials.map((t, i) => (
@@ -211,7 +211,7 @@ const BecomeProvider = () => {
         <section className="py-20 sm:py-28 bg-white">
             <div className="container mx-auto px-6 max-w-3xl">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 font-serif" style={{fontFamily:'Montserrat'}}>Frequently Asked Questions</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold text-indigo-900"  style={{fontFamily:'Nunito'}}>Frequently Asked Questions</h2>
                 </div>
                 <div className="space-y-4">
                     {faqs.map((faq, i) => <FaqItem key={i} {...faq} />)}

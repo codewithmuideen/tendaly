@@ -77,7 +77,7 @@ const Header = () => {
          {/* =========================================================
     *   Large & Prominent "Get Started" Button (Recommended)
     * ====================================================== */}
-<button
+<button  style={{fontFamily:'Nunito'}}
   className="flex items-center gap-3 bg-[#0099ff] text-white text-lg font-bold px-6 py-3 rounded-full duration-300 hover:bg-[#007acc] transform hover:scale-105 md:ml-8"
   onClick={() => setShowModal(true)}
 >
@@ -98,21 +98,21 @@ const Header = () => {
             className="bg-white max-w-sm w-full rounded-xl p-6 shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-xl font-bold text-gray-800 mb-3">Coming Soon</h2>
-            <p className="text-gray-600 mb-6">
+            <h2 className="text-xl font-bold text-gray-800 mb-3"  style={{fontFamily:'Nunito'}}>Coming Soon</h2>
+            <p className="text-gray-600 mb-6"  style={{fontFamily:'Nunito'}}>
               Our application is currently in development and will be launching soon.
               Be the first to know — join our waitlist now!
             </p>
 
             <div className="flex justify-end gap-3">
-              <button
+              <button  style={{fontFamily:'Nunito'}}
                 className="px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100"
                 onClick={() => setShowModal(false)}
               >
                 Close
               </button>
 
-              <button
+              <button  style={{fontFamily:'Nunito'}}
                 className="bg-[#0099ff] text-white px-4 py-2 rounded-md hover:bg-[#007acc]"
                 onClick={() => {
                   setShowModal(false);

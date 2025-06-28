@@ -18,7 +18,7 @@ const AboutTendalyPage = () => {
             <p className="mt-6 text-base sm:text-lg text-gray-600 leading-relaxed">
               Tendaly is a care-focused and customer-centered platform designed to seamlessly connect
 caregivers with individuals and families in need of compassionate, professional support.
-Whether it&#39;s for elderly care, childcare, special needs, or in-home assistance, Tendaly brings
+Whether it&#39;s for senior care, childcare, special needs, or in-home assistance, Tendaly brings
 trusted care to your doorstep. Our platform makes it easy to find, book, and manage care
 services tailored to your needs and schedule. At Tendaly, we believe that quality care should be
 accessible, reliable, and built on trust because everyone deserves to be cared for with dignity
@@ -72,7 +72,7 @@ and respect.
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Our mission</h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              At Tendaly, deliver compassionate, high-quality care by putting people first— always. We are
+              At Tendaly, deliver compassionate, high-quality care by putting people first always. We are
 care-focused, and customer-centered, committed to empowering families and care providers
 through technology that’s built on trust, dignity, and real human needs. Whether it’s for a loved
 one or a livelihood, we connect people to care that matters.
@@ -82,7 +82,7 @@ one or a livelihood, we connect people to care that matters.
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Our vision</h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
               At Tendaly, we envision becoming the most trusted global platform, where finding trusted
-care—for seniors, children, adults, pets, and personal well-being—is simple, safe and
+care for seniors, children, adults, pets, and personal well-being is simple, safe and
 personalized. Our goal is to become the go-to platform that empowers families and care
 providers alike, using smart technology to bridge the gap between everyday needs and
 exceptional care. Wherever care is needed, Tendaly is there.

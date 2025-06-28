@@ -43,8 +43,8 @@ const Hero = () => {
               </h1>
 
               <p className="mt-4 text-lg text-black">
-                Tendaly connects families with trusted care providers. Find care, offer care, 
-                and manage everything from your phone. It's fast, secure, and designed for African families.
+                Tendaly connects families with trusted care providers. Find care, 
+                offer care, and manage everything from your phone — wherever you are.
               </p>
 
               <div className="mt-8 flex items-center justify-center lg:justify-start gap-4">
