@@ -21,7 +21,7 @@ import WaitlistBanner from './components/WaitlistBanner';
 import HowItWorksCombined from './components/HowItWorksCombined';
 import Testimonials from './pages/Testimonials';
 import FeaturesPage from './pages/FeaturesPage';
-import Cta from './components/Cta';
+// import Cta from './components/Cta';
 
 
 
@@ -62,7 +62,7 @@ function App() {
               <Route path="/features" element={<FeaturesPage />} />
             </Routes>
           </main>
-          <Cta />
+          {/* <Cta /> */}
           <WaitlistBanner />
           <SiteFooter />
         </div>

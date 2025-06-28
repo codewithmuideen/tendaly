@@ -50,8 +50,8 @@ const SiteFooter = () => {
             <div className="space-y-8">
               <img className="h-12 w-auto" src={images.logo} alt="Greymate Care" />
               <p className="text-gray-300">
-                See available caregivers near you in real time, filter by specialty,
-                and lock in care within minutes.
+                Join families who trust Tendaly to care for their loved ones at home.
+            Sign up and get notified when the app is ready.
               </p>
 
               {/* App store buttons with modal trigger */}
