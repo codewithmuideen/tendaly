@@ -61,7 +61,7 @@ const SiteFooter = () => {
           <div className="xl:grid xl:grid-cols-4 xl:gap-8">
             {/* Logo and Description */}
             <div className="space-y-8">
-              <img className="h-12 w-auto" src={images.logo} alt="Tendaly" />
+              <img className="h-12 w-auto" src={images.logo3} alt="Tendaly" />
               <p className="text-gray-300">
                 Join families who trust Tendaly to care for their loved ones at home.
                 Sign up and get notified when the app is ready.

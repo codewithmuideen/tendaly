@@ -1,5 +1,6 @@
 import logo from "../assets/Logo Lockup (Blue).svg";
-import logo2 from "../assets/Logo mark (Blue).svg";
+import logo3 from "../assets/Logo Lockup (White).svg";
+import logo2 from "../assets/Logo mark (Blue).svg"; 
 import chevrondown from "../assets/chevron-down-duo-svgrepo-com.svg";
 import chevronup from "../assets/chevron-up-duo-svgrepo-com.svg";
 import hamburger from "../assets/hamburger-2-menu-mobile-svgrepo-com.svg";
@@ -42,6 +43,7 @@ export default {
   blackios,
   blackplay,
   care,
+  logo3,
   careb,
   skyblue00,
   skyblue0,
