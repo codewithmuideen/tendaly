@@ -1,27 +1,21 @@
 // src/components/HeroComponent.jsx
 
-// === 1. Import useState to manage the modal ===
 import React, { useState } from 'react';
 import { FaApple } from 'react-icons/fa';
 import { SiGoogleplay } from 'react-icons/si';
-// Import your images from the constants file
 import images from "../constants/images";
 
-// The StarIcon component remains the same
 const StarIcon = () => (
-    <svg className="w-3 h-3 text-yellow-400 ml-0.5" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-    </svg>
+  <svg className="w-3 h-3 text-yellow-400 ml-0.5" fill="currentColor" viewBox="0 0 20 20">
+    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+  </svg>
 );
 
-
 const HeroComponent = () => {
-  // === 2. Initialize state for the modal visibility ===
   const [showModal, setShowModal] = useState(false);
 
-  // Function to handle opening the modal and preventing link navigation
   const handleStoreClick = (e) => {
-    e.preventDefault(); // Prevents the page from jumping to the top
+    e.preventDefault();
     setShowModal(true);
   };
 
@@ -35,53 +29,53 @@ const HeroComponent = () => {
       <div className="relative container mx-auto px-6 lg:px-8 py-24 sm:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
-          {/* ====== Left Column: Text Content ====== */}
+          {/* Left Column */}
           <div className="text-center lg:text-left z-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight">
               Care for Everyone<br />
-                At Every Stage of Life
+              At Every Stage of Life
             </h1>
             <p className="mt-6 text-lg text-slate-600 max-w-lg mx-auto lg:mx-0">
-             Tendaly connects families with trusted care providers. Find care, offer care, 
-                and manage everything from your phone. It's fast, secure, and designed for everyone.
+              Tendaly connects families with trusted care providers. Find care, offer care, 
+              and manage everything from your phone. It's fast, secure, and designed for everyone.
             </p>
-            
-     <div className="mt-10 flex flex-row items-center justify-center lg:justify-start gap-4">
-  <button
-    onClick={handleStoreClick}
-    className="flex items-center gap-3 bg-black text-white px-5 py-3 rounded-full hover:bg-gray-900 transition-all duration-300"
-  >
-    <FaApple size={24} />
-    <span className="text-sm font-semibold leading-tight text-left">
-      Download on<br /><span className="text-base font-bold">Apple Store</span>
-    </span>
-  </button>
 
-  <button
-    onClick={handleStoreClick}
-    className="flex items-center gap-3 bg-[#0b5aad] text-white px-5 py-3 rounded-full hover:bg-[#0b5aad] transition-all duration-300"
-  >
-    <SiGoogleplay size={22} />
-    <span className="text-sm font-semibold leading-tight text-left">
-      Download on<br /><span className="text-base font-bold">Play Store</span>
-    </span>
-  </button>
-</div>
+            {/* Store buttons */}
+            <div className="mt-10 flex flex-row items-center justify-center lg:justify-start gap-4">
+              <button
+                onClick={handleStoreClick}
+                className="min-w-[140px] flex items-center gap-3 bg-black text-white px-5 py-3 rounded-full hover:bg-gray-900 transition-all duration-300"
+              >
+                <FaApple size={18} />
+                <div className="flex flex-col text-left leading-tight whitespace-nowrap">
+                  <span className="text-[11px] sm:text-xs">Download on</span>
+                  <span className="text-sm sm:text-base font-bold">Apple Store</span>
+                </div>
+              </button>
 
+              <button
+                onClick={handleStoreClick}
+                className="min-w-[140px] flex items-center gap-3 bg-[#0b5aad] text-white px-5 py-3 rounded-full hover:bg-[#0b5aad] transition-all duration-300"
+              >
+                <SiGoogleplay size={18} />
+                <div className="flex flex-col text-left leading-tight whitespace-nowrap">
+                  <span className="text-[11px] sm:text-xs">Download on</span>
+                  <span className="text-sm sm:text-base font-bold">Play Store</span>
+                </div>
+              </button>
+            </div>
           </div>
 
-          {/* ====== Right Column: Image & UI Elements ====== */}
+          {/* Right Column */}
           <div className="relative mt-12 lg:mt-0">
             <div className="relative w-full h-full flex items-center justify-center">
-              
               <div className="absolute -top-5 -right-10 w-full h-full rounded-3xl bg-gradient-to-tr from-blue-500 via-indigo-400 to-orange-300 transform rotate-12 scale-110"></div>
-              
               <img 
                 src={images.care} 
                 alt="Friendly female doctor in scrubs wearing a mask and pointing upwards" 
                 className="relative z-10 w-full max-w-sm rounded-3xl shadow-2xl object-cover ring-8 ring-white/50"
               />
-              
+
               <div className="absolute z-20 -bottom-8 -left-8 w-64 bg-white/80 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-gray-200/50">
                 <div className="flex items-center mb-2">
                   <img src="https://i.pravatar.cc/40?u=a042581f4e29026704d" alt="User avatar" className="w-10 h-10 rounded-full ring-2 ring-white" />
@@ -122,15 +116,15 @@ const HeroComponent = () => {
           </div>
         </div>
       </div>
-      
-      {/* === 4. Your Modal code, conditionally rendered based on showModal state === */}
+
+      {/* Modal */}
       {showModal && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
           onClick={() => setShowModal(false)}
         >
           <div
-            className="bg-white max-w-sm w-full rounded-xl p-6 shadow-xl m-4" // Added m-4 for safety on small screens
+            className="bg-white max-w-sm w-full rounded-xl p-6 shadow-xl m-4"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-xl font-bold text-gray-800 mb-3">Coming Soon</h2>
