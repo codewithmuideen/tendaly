@@ -1,6 +1,15 @@
 // SiteFooter.jsx
 import React, { useState } from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { SiGoogleplay } from 'react-icons/si';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaApple,
+  FaArrowUp,          // ← added
+} from 'react-icons/fa';
 import images from '../constants/images';
 
 // FooterLinkColumn supports className now ✅
@@ -52,19 +61,38 @@ const SiteFooter = () => {
           <div className="xl:grid xl:grid-cols-4 xl:gap-8">
             {/* Logo and Description */}
             <div className="space-y-8">
-              <img className="h-12 w-auto" src={images.logo} alt="Greymate Care" />
+              <img className="h-12 w-auto" src={images.logo} alt="Tendaly" />
               <p className="text-gray-300">
                 Join families who trust Tendaly to care for their loved ones at home.
                 Sign up and get notified when the app is ready.
               </p>
 
-              {/* App store buttons */}
-              <div className="flex flex-row items-center gap-4 mt-4">
-                <button onClick={() => setShowModal(true)} className="transition-opacity hover:opacity-80">
-                  <img className="h-12 w-auto" src={images.playstore} alt="Get it on Play Store" />
+              {/* Store buttons: always side‑by‑side */}
+              <div className="mt-4 flex gap-3 max-w-xs">
+                {/* Apple Store */}
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="w-[150px] flex items-center bg-black text-white px-4 py-3 rounded-full
+                             hover:bg-gray-900 transition-all duration-300"
+                >
+                  <FaApple size={18} className="mr-2 shrink-0" />
+                  <div className="text-left leading-tight">
+                    <span className="block text-[11px]">Download on</span>
+                    <span className="block text-sm font-bold">Apple&nbsp;Store</span>
+                  </div>
                 </button>
-                <button onClick={() => setShowModal(true)} className="transition-opacity hover:opacity-80">
-                  <img className="h-12 w-auto" src={images.appstore} alt="Download on the App Store" />
+
+                {/* Play Store */}
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="w-[150px] flex items-center bg-[#0b5aad] text-white px-4 py-3 rounded-full
+                             hover:bg-[#094a91] transition-all duration-300"
+                >
+                  <SiGoogleplay size={18} className="mr-2 shrink-0" />
+                  <div className="text-left leading-tight">
+                    <span className="block text-[11px]">Download on</span>
+                    <span className="block text-sm font-bold">Play&nbsp;Store</span>
+                  </div>
                 </button>
               </div>
             </div>
@@ -103,6 +131,16 @@ const SiteFooter = () => {
           </div>
         </div>
       </footer>
+
+      {/* === Back‑to‑Top Button (added) === */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-[#0b5aad] text-white shadow-lg
+                   hover:bg-[#094a91] transition-all duration-300"
+        aria-label="Scroll to top"
+      >
+        <FaArrowUp size={18} />
+      </button>
 
       {/* Modal */}
       {showModal && (

@@ -2,7 +2,8 @@
 
 // === 1. Import useState to manage the modal ===
 import React, { useState } from 'react';
-
+import { FaApple } from 'react-icons/fa';
+import { SiGoogleplay } from 'react-icons/si';
 // Import your images from the constants file
 import images from "../constants/images";
 
@@ -42,18 +43,31 @@ const HeroComponent = () => {
             </h1>
             <p className="mt-6 text-lg text-slate-600 max-w-lg mx-auto lg:mx-0">
              Tendaly connects families with trusted care providers. Find care, offer care, 
-                and manage everything from your phone. It's fast, secure, and designed for African families.
+                and manage everything from your phone. It's fast, secure, and designed for everyone.
             </p>
             
-            {/* === 3. Mobile layout changed from flex-col to flex. Click handlers added. === */}
-            <div className="mt-10 flex items-center justify-center lg:justify-start gap-4">
-              <a href="#" onClick={handleStoreClick}>
-                <img src={images.appstore} alt="Get it from Apple Store" className="h-14 transition-transform hover:scale-105" />
-              </a>
-              <a href="#" onClick={handleStoreClick}>
-                <img src={images.playstore} alt="Get it on Google Play" className="h-14 transition-transform hover:scale-105" />
-              </a>
-            </div>
+     <div className="mt-10 flex flex-row items-center justify-center lg:justify-start gap-4">
+  <button
+    onClick={handleStoreClick}
+    className="flex items-center gap-3 bg-black text-white px-5 py-3 rounded-full hover:bg-gray-900 transition-all duration-300"
+  >
+    <FaApple size={24} />
+    <span className="text-sm font-semibold leading-tight text-left">
+      Download on<br /><span className="text-base font-bold">Apple Store</span>
+    </span>
+  </button>
+
+  <button
+    onClick={handleStoreClick}
+    className="flex items-center gap-3 bg-[#0b5aad] text-white px-5 py-3 rounded-full hover:bg-[#0b5aad] transition-all duration-300"
+  >
+    <SiGoogleplay size={22} />
+    <span className="text-sm font-semibold leading-tight text-left">
+      Download on<br /><span className="text-base font-bold">Play Store</span>
+    </span>
+  </button>
+</div>
+
           </div>
 
           {/* ====== Right Column: Image & UI Elements ====== */}
