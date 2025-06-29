@@ -23,7 +23,7 @@ const Contact = () => {
     {
       icon: HiOutlineMail,
       title: 'Email Us',
-      details: 'support@tendaly.com',
+      details: 'help@tendaly.com',
     },
     {
       icon: HiOutlinePhone,
@@ -33,7 +33,7 @@ const Contact = () => {
     {
       icon: HiOutlineLocationMarker,
       title: 'Visit Us',
-      details: '123 Caregiver Lane, Suite 100, San Francisco, CA 94105',
+      details: 'Delaware Tpke, Newark, Delaware US',
     },
   ];
 
@@ -127,7 +127,7 @@ const Contact = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full rounded-md bg-indigo-600 px-3.5 py-3 text-center text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="w-full rounded-md bg-[#0099ff] px-3.5 py-3 text-center text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Send Message
                 </button>

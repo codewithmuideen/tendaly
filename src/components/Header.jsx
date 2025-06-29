@@ -4,7 +4,7 @@ import {
   Bars3BottomRightIcon,
   XMarkIcon,
 } from "@heroicons/react/24/solid";
-import { AiOutlineArrowRight } from "react-icons/ai";
+// import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -81,7 +81,8 @@ const Header = () => {
   className="flex items-center gap-3 bg-[#0099ff] text-white text-lg font-bold px-6 py-3 rounded-full duration-300 hover:bg-[#007acc] transform hover:scale-105 md:ml-8"
   onClick={() => setShowModal(true)}
 >
-  Get Started <AiOutlineArrowRight className="w-5 h-5" />
+  {/* Get Started <AiOutlineArrowRight className="w-5 h-5" /> */}
+  Get Started
 </button>
           </ul>
         </div>

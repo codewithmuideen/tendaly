@@ -48,8 +48,8 @@ const SiteFooter = () => {
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: FaFacebookF },
     { name: 'Twitter', href: '#', icon: FaTwitter },
-    { name: 'Instagram', href: '#', icon: FaInstagram },
-    { name: 'LinkedIn', href: '#', icon: FaLinkedinIn },
+    { name: 'Instagram', href: 'https://www.instagram.com/tendaly_?igsh=NTN1Y2NwbjUydHl1', icon: FaInstagram },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/tendaly/', icon: FaLinkedinIn },
     { name: 'YouTube', href: '#', icon: FaYoutube },
   ];
 
