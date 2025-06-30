@@ -26,11 +26,12 @@ const TopHeader = () => {
                 <StarIcon key={i} />
               ))}
             </div>
-            <span className="ml-2"  style={{fontFamily:'Nunito'}}>Rated 4.7 on HIPAA, PCI, DSS</span>
+            <span className="ml-2"  style={{fontFamily:'Nunito'}}>Rated 4.7 on HIPAA, PCI-DSS</span>
           </a>
           <div className="flex items-center gap-6">
-            <a href="/provider" className="hover:underline">Become a Provider</a>
-            <a href="/contact" className="hover:underline">Contact Tendaly</a>
+            <a href="/provider" className="hover:underline">Care Providers</a>
+            <a href="/find-care" className="hover:underline">Care Seekers</a>
+            {/* <a href="/contact" className="hover:underline">Contact Tendaly</a> */}
           </div>
         </div>
       </div>

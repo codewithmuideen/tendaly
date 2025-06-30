@@ -56,13 +56,13 @@ and respect.
             <img
               src={images.sticky7}
               alt="Man presenting"
-              className="hidden sm:block absolute bottom-12 right-16 w-28 sm:w-40 lg:w-52 rounded-2xl shadow-lg -rotate-3 z-10"
+              className="absolute bottom-12 right-16 w-28 sm:w-40 lg:w-52 rounded-2xl shadow-lg -rotate-3 z-10"
             />
             {/* 5 – hidden on very small devices */}
             <img
               src={images.sticky8}
               alt="Team collaborating"
-              className="hidden sm:block absolute bottom-0 left-8 w-36 sm:w-48 lg:w-64 rounded-2xl shadow-lg rotate-2 z-10"
+              className="absolute bottom-0 left-8 w-36 sm:w-48 lg:w-64 rounded-2xl shadow-lg rotate-2 z-10"
             />
           </div>
         </div>

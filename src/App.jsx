@@ -21,6 +21,7 @@ import WaitlistBanner from './components/WaitlistBanner';
 import HowItWorksCombined from './components/HowItWorksCombined';
 import Testimonials from './pages/Testimonials';
 import FeaturesPage from './pages/FeaturesPage';
+import FindCarePage from './pages/FindCarePage';
 // import Cta from './components/Cta';
 
 
@@ -54,6 +55,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/waitlist" element={<Waitlist />} />
               <Route path="/provider" element={<BecomeProvider />} />
+              <Route path="/find-care" element={<FindCarePage />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/login" element={<Login />} />
               <Route path="/about" element={<AboutTendalyPage />} />

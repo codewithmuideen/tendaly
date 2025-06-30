@@ -32,7 +32,7 @@ const features = [
   },
   {
     icon: BsCalendar2Check,
-    title: 'Booking & Payment',
+    title: 'Secure Booking & Payment',
     positionClasses: 'lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2',
     iconBg: 'bg-rose-100',
     iconColor: 'text-rose-600',

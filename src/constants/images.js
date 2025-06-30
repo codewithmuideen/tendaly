@@ -36,8 +36,10 @@ import herosection from "../assets/hero.png";
 import herome from "../assets/herome.png";
 import blackplay from "../assets/blackplay.png";
 import blackios from "../assets/blackios.png";
+import square from "../assets/sticky1.png";
 
 export default {
+  square,
   herosection,
   herome,
   blackios,

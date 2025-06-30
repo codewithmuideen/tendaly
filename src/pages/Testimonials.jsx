@@ -7,7 +7,7 @@ import { FaStar, FaQuoteLeft } from 'react-icons/fa';
 const testimonials = [
   {
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80',
-    name: 'Amina Okoro',
+    name: 'Abby Kilpatrick',
     role: 'Daughter of a Client',
     rating: 5,
     review: 'Finding reliable care for my mother from miles away felt impossible until I found Tendaly. The app is so intuitive, and the caregiver they matched us with, Grace, is an absolute gem. I have peace of mind I never thought possible.',
@@ -15,7 +15,7 @@ const testimonials = [
   {
     // ✨ FIXED IMAGE URL
     image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80',
-    name: 'David Chen',
+    name: 'Cindy Chen',
     role: 'Certified Caregiver',
     rating: 5,
     review: 'Tendaly respects caregivers. I set my own hours, my rates are fair, and I get paid weekly without any hassle. The platform makes it easy to connect with families who truly appreciate my skills. It’s the best career move I’ve made.',
@@ -25,12 +25,12 @@ const testimonials = [
     name: 'Fatima Al-Jamil',
     role: 'Seeking Post-Operative Care',
     rating: 5,
-    review: 'After my surgery, I needed short-term help at home. Tendaly connected me with a compassionate professional within hours. The entire process was seamless, secure, and so much less stressful than I anticipated.',
+    review: 'After my surgery, I needed short-term help at home. Tendaly connected me with a compassionate professional within minutes. The entire process was seamless, secure, and so much less stressful than I anticipated.',
   },
    {
     // ✨ FIXED IMAGE URL
     image: 'https://images.unsplash.com/photo-1530268729831-4b0b9e170218?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80',
-    name: 'Samuel Adebayo',
+    name: 'Aman Bhardwaj',
     role: 'Son of a Client',
     rating: 5,
     review: 'The transparency is what sold me. I can see visit logs, communicate directly with my father\'s caregiver, and handle payments all in one place. It’s an incredible service for the diaspora community.',
