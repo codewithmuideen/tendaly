@@ -84,7 +84,7 @@ const Waitlist = () => {
         { value: "provider", label: "Care Provider" },
         { value: "both", label: "Both" },
       ].map(({ value, label }) => (
-        <label key={value} className="inline-flex items-center gap-2 cursor-pointer">
+        <label key={value} className="flex items-center gap-2 cursor-pointer">
           <input
             type="radio"
             name="role"
@@ -153,7 +153,7 @@ const Waitlist = () => {
   {/* 7. Zip Code or Location */}
   <div>
     <label htmlFor="location" className="block font-medium text-gray-700 mb-1">
-      Zip Code or Location <span className="text-gray-400">(optional)</span>
+      Zip Code <span className="text-gray-400">(optional)</span>
     </label>
     <input
       id="location"
