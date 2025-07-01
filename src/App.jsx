@@ -25,7 +25,7 @@ import FindCarePage from './pages/FindCarePage';
 import ScrollToHash from './ScrollToHash';
 import TermsOfUsePage from './pages/TermsOfUsePage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
-import PrivacyRequestPage from './pages/PrivacyRequestPage';
+import MissionComponent from './pages/MissionComponent';
 // import Cta from './components/Cta';
 
 
@@ -69,7 +69,7 @@ function App() {
               <Route path="/features" element={<FeaturesPage />} />
               <Route path="/terms-of-use" element={<TermsOfUsePage />} />
               <Route path="/private-policy" element={<PrivacyPolicyPage />} />
-              <Route path="/privacy-requests" element={<PrivacyRequestPage/>} />
+              <Route path="/donate" element={<MissionComponent />} />
             </Routes>
           </main>
           {/* <Cta /> */}

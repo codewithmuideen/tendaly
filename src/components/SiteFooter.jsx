@@ -42,7 +42,7 @@ const SiteFooter = () => {
   const moreLinks = [
     { name: 'For Home Care Agencies', href: '/provider' },
     { name: 'For Employers', href: '/provider' },
-    { name: 'Support a care mission', href: '/about' },
+    { name: 'Support a care mission', href: '/donate' },
   ];
 
   const socialLinks = [
