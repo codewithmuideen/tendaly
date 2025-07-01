@@ -208,7 +208,7 @@ const Waitlist = () => {
             <a href="#" aria-label="YouTube" className="text-[#FF0000] hover:text-[#0B5AAD] transition-colors">
               <FaYoutube size={22} />
             </a>
-            <a href="#" aria-label="Facebook" className="text-[#1877F2] hover:text-[#0B5AAD] transition-colors">
+            <a href="https://www.facebook.com/share/19MoW9JF5H/?mibextid=wwXIfr" aria-label="Facebook" className="text-[#1877F2] hover:text-[#0B5AAD] transition-colors">
               <FaFacebookF size={22} />
             </a>
           </div>

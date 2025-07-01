@@ -46,7 +46,7 @@ const SiteFooter = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: FaFacebookF },
+    { name: 'Facebook', href: 'https://www.facebook.com/share/19MoW9JF5H/?mibextid=wwXIfr', icon: FaFacebookF },
     { name: 'Twitter', href: '#', icon: FaTwitter },
     { name: 'Instagram', href: 'https://www.instagram.com/tendaly_?igsh=NTN1Y2NwbjUydHl1', icon: FaInstagram },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/company/tendaly/', icon: FaLinkedinIn },
