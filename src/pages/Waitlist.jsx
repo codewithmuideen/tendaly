@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaFacebookF } from 'react-icons/fa';
-
+import { FaInstagram, FaLinkedinIn, FaYoutube, FaFacebookF } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 const Waitlist = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -196,19 +196,19 @@ const Waitlist = () => {
         <div className="mt-10 border-t border-gray-200 pt-6 relative z-10 text-center">
           <p className="text-gray-500 text-sm mb-4">Follow us for updates</p>
           <div className="flex justify-center gap-6">
-            <a href="https://www.instagram.com/tendaly_?igsh=NTN1Y2NwbjUydHl1" aria-label="Instagram" className="text-[#FF7B89] hover:text-[#0B5AAD] transition-colors">
+            <a href="https://www.instagram.com/tendalyinc?igsh=MjlhZm5zYm45Y3I5" aria-label="Instagram" className="text-[#FF7B89] hover:text-[#0B5AAD] transition-colors">
               <FaInstagram size={22} />
             </a>
-            <a href="#" aria-label="Twitter" className="text-[#0099FF] hover:text-[#0B5AAD] transition-colors">
-              <FaTwitter size={22} />
+            <a href="https://x.com/tendalyinc" aria-label="Twitter" className="text-[#0099FF] hover:text-[#0B5AAD] transition-colors">
+              <FaXTwitter size={22} />
             </a>
             <a href="https://www.linkedin.com/company/tendaly/" aria-label="LinkedIn" className="text-[#0B5AAD] hover:text-[#FF7B89] transition-colors">
               <FaLinkedinIn size={22} />
             </a>
-            <a href="#" aria-label="YouTube" className="text-[#FF0000] hover:text-[#0B5AAD] transition-colors">
+            <a href="https://youtube.com/@TendalyInc" aria-label="YouTube" className="text-[#FF0000] hover:text-[#0B5AAD] transition-colors">
               <FaYoutube size={22} />
             </a>
-            <a href="https://www.facebook.com/share/19MoW9JF5H/?mibextid=wwXIfr" aria-label="Facebook" className="text-[#1877F2] hover:text-[#0B5AAD] transition-colors">
+            <a href="https://www.facebook.com/share/1G1yJeWfFz/?mibextid=wwXIfr" aria-label="Facebook" className="text-[#1877F2] hover:text-[#0B5AAD] transition-colors">
               <FaFacebookF size={22} />
             </a>
           </div>

@@ -12,7 +12,7 @@ const features = [
   {
     icon: BsRobot,
     title: 'AI-Powered Matching',
-    positionClasses: 'lg:top-0 lg:left-1/2 lg:-translate-x-1/2',
+    positionClasses: 'lg:top-0 lg:left-5 lg:-translate-x-1/2 lg:-translate-y-1/2',
     iconBg: 'bg-sky-100',
     iconColor: 'text-sky-600',
   },
@@ -33,7 +33,7 @@ const features = [
   {
     icon: BsCalendar2Check,
     title: 'Secure Booking & Payment',
-    positionClasses: 'lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2',
+    positionClasses: 'lg:bottom-0 lg:right-5 lg:-translate-x-1/2 lg:translate-y-1/2',
     iconBg: 'bg-rose-100',
     iconColor: 'text-rose-600',
   },
@@ -105,15 +105,18 @@ const FeaturesPage = () => {
           >
             {/* Central Image */}
             <motion.div
+              // 👇 THIS IS THE ONLY LINE THAT CHANGED 👇
+              className="flex justify-center" // This class will center the image inside
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.5, ease: 'easeOut' }}
             >
               <img
-                src={images.sticky}
+                src={images.all}
                 alt="Tendaly App Core"
-                className="relative z-10 h-72 w-72 rounded-full object-cover shadow-2xl"
+                style={{width:'50%'}}
               />
+              
             </motion.div>
 
             {/* Feature Nodes */}
@@ -125,10 +128,10 @@ const FeaturesPage = () => {
           {/* --- MOBILE: Stacked List Layout --- */}
           <div className="lg:hidden">
             <div className="flex justify-center mb-12">
-               <img
-                src={images.sticky}
+              <img
+                src={images.all}
                 alt="Tendaly App Core"
-                className="h-64 w-64 rounded-full object-cover shadow-xl"
+                
               />
             </div>
             <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">

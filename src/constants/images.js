@@ -11,7 +11,10 @@ import heroMockup from "../assets/heropic.png";
 import blue from "../assets/blueBackground.jpg";
 import blue2 from "../assets/blue2.jpg";
 import white from "../assets/whiteBackground.jpg";
-import sticky from "../assets/sticky.jpg";
+import sticky from "../assets/tendalyapp2.png";
+import app1 from "../assets/app1.png";
+import app2 from "../assets/app2.png";
+import app3 from "../assets/app3.png";
 import sticky0 from "../assets/sticky0.jpg";
 import screen0 from "../assets/screen-0.webp";
 import screen1 from "../assets/screen00.jpg";
@@ -36,8 +39,13 @@ import herosection from "../assets/hero.png";
 import herome from "../assets/herome.png";
 import blackplay from "../assets/blackplay.png";
 import blackios from "../assets/blackios.png";
+import all from "../assets/all.png";
 
 export default {
+  all,
+  app1,
+  app2,
+  app3,
   herosection,
   herome,
   blackios,

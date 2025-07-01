@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import { SiGoogleplay } from 'react-icons/si';
 import {
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
   FaApple,
   FaArrowUp,          // ← added
 } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 import images from '../constants/images';
 
 // FooterLinkColumn supports className now ✅
@@ -42,15 +42,15 @@ const SiteFooter = () => {
   const moreLinks = [
     { name: 'For Home Care Agencies', href: '/provider' },
     { name: 'For Employers', href: '/provider' },
-    { name: 'For CSRs/Donations', href: '/about' },
+    { name: 'Support a care mission', href: '/about' },
   ];
 
   const socialLinks = [
-    { name: 'Facebook', href: 'https://www.facebook.com/share/19MoW9JF5H/?mibextid=wwXIfr', icon: FaFacebookF },
-    { name: 'Twitter', href: '#', icon: FaTwitter },
-    { name: 'Instagram', href: 'https://www.instagram.com/tendaly_?igsh=NTN1Y2NwbjUydHl1', icon: FaInstagram },
+    { name: 'Facebook', href: 'https://www.facebook.com/share/1G1yJeWfFz/?mibextid=wwXIfr', icon: FaFacebookF },
+    { name: 'Twitter', href: 'https://x.com/tendalyinc', icon: FaXTwitter },
+    { name: 'Instagram', href: 'https://www.instagram.com/tendalyinc?igsh=MjlhZm5zYm45Y3I5', icon: FaInstagram },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/company/tendaly/', icon: FaLinkedinIn },
-    { name: 'YouTube', href: '#', icon: FaYoutube },
+    { name: 'YouTube', href: 'https://youtube.com/@TendalyInc', icon: FaYoutube },
   ];
 
   return (
@@ -122,8 +122,8 @@ const SiteFooter = () => {
           {/* Footer Bottom */}
           <div className="mt-16 flex flex-col items-center justify-between border-t border-white/10 pt-8 sm:mt-20 sm:flex-row lg:mt-24">
             <div className="flex space-x-6 text-sm leading-6 text-gray-400">
-              <a href="" className="hover:text-white">Terms of Use</a>
-              <a href="" className="hover:text-white">Privacy Policy</a>
+              <a href="/terms-of-use" className="hover:text-white">Terms of Use</a>
+              <a href="/private-policy" className="hover:text-white">Privacy Policy</a>
             </div>
             <p className="mt-4 text-sm leading-6 text-gray-400 sm:mt-0">
               © Copyright 2025, All Rights Reserved

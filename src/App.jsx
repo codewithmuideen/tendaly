@@ -23,6 +23,9 @@ import Testimonials from './pages/Testimonials';
 import FeaturesPage from './pages/FeaturesPage';
 import FindCarePage from './pages/FindCarePage';
 import ScrollToHash from './ScrollToHash';
+import TermsOfUsePage from './pages/TermsOfUsePage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import PrivacyRequestPage from './pages/PrivacyRequestPage';
 // import Cta from './components/Cta';
 
 
@@ -64,6 +67,9 @@ function App() {
               <Route path="/how-it-works" element={<HowItWorksCombined />} />
               <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/features" element={<FeaturesPage />} />
+              <Route path="/terms-of-use" element={<TermsOfUsePage />} />
+              <Route path="/private-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/privacy-requests" element={<PrivacyRequestPage/>} />
             </Routes>
           </main>
           {/* <Cta /> */}
