@@ -137,7 +137,7 @@ const Waitlist = () => {
         { value: "text", label: "Text" },
         { value: "both", label: "Both" },
       ].map(({ value, label }) => (
-        <label key={value} className="inline-flex items-center gap-2 cursor-pointer">
+        <label key={value} className="block items-center gap-2 cursor-pointer">
           <input
             type="radio"
             name="preferredNotification"

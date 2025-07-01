@@ -27,44 +27,48 @@ and respect.
           </div>
 
           {/* -- Image Collage -- */}
-          <div className="relative w-full h-72 sm:h-[420px] lg:h-[550px] overflow-hidden order-1 lg:order-2">
-            {/* Background blob */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-[340px] h-[340px] sm:w-[500px] sm:h-[500px] bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-purple-200/30 via-pink-200/10 to-transparent blur-3xl" />
-            </div>
+         <div className="relative w-full h-[400px] sm:h-[520px] lg:h-[620px] overflow-visible order-1 lg:order-2">
+  {/* Background blob */}
+  <div className="absolute inset-0 flex items-center justify-center">
+    <div className="w-[340px] h-[340px] sm:w-[500px] sm:h-[500px] bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-purple-200/30 via-pink-200/10 to-transparent blur-3xl" />
+  </div>
 
-            {/* Individual photos */}
-            {/* 1 */}
-            <img
-              src={images.sticky0}
-              alt="Woman working on a laptop"
-              className="absolute top-6 sm:top-12 left-2 sm:left-0 w-32 sm:w-44 lg:w-56 rounded-2xl shadow-lg -rotate-2 z-20"
-            />
-            {/* 2 */}
-            <img
-              src={images.sticky10}
-              alt="Man using a tablet"
-              className="absolute top-2 sm:top-4 right-4 sm:right-8 w-36 sm:w-48 lg:w-64 rounded-2xl shadow-lg rotate-1 z-30"
-            />
-            {/* 3 */}
-            <img
-              src={images.sticky9}
-              alt="Two women collaborating"
-              className="absolute top-1/2 -translate-y-1/3 right-0 w-32 sm:w-40 lg:w-60 rounded-2xl shadow-lg rotate-3 z-20"
-            />
-            {/* 4 – hidden on very small devices */}
-            <img
-              src={images.sticky7}
-              alt="Man presenting"
-              className="absolute bottom-12 right-16 w-28 sm:w-40 lg:w-52 rounded-2xl shadow-lg -rotate-3 z-10"
-            />
-            {/* 5 – hidden on very small devices */}
-            <img
-              src={images.sticky8}
-              alt="Team collaborating"
-              className="absolute bottom-0 left-8 w-36 sm:w-48 lg:w-64 rounded-2xl shadow-lg rotate-2 z-10"
-            />
-          </div>
+  {/* Image 1 */}
+  <img
+    src={images.sticky0}
+    alt="Woman working on a laptop"
+    className="absolute top-4 left-2 sm:top-10 sm:left-6 w-28 sm:w-40 lg:w-52 rounded-2xl shadow-lg rotate-0 z-20"
+  />
+
+  {/* Image 2 */}
+  <img
+    src={images.sticky10}
+    alt="Man using a tablet"
+    className="absolute top-0 right-4 sm:top-6 sm:right-10 w-28 sm:w-40 lg:w-52 rounded-2xl shadow-lg rotate-1 z-30"
+  />
+
+  {/* Image 3 */}
+  <img
+    src={images.sticky9}
+    alt="Two women collaborating"
+    className="absolute top-1/2 -translate-y-1/2 right-6 sm:right-12 w-28 sm:w-36 lg:w-44 rounded-2xl shadow-lg rotate-2 z-20"
+  />
+
+  {/* Image 4 */}
+  <img
+    src={images.sticky7}
+    alt="Man presenting"
+    className="absolute bottom-20 right-24 w-28 sm:w-36 lg:w-44 rounded-2xl shadow-lg -rotate-2 z-10"
+  />
+
+  {/* Image 5 */}
+  <img
+    src={images.sticky8}
+    alt="Team collaborating"
+    className="absolute bottom-6 left-8 sm:left-12 w-28 sm:w-36 lg:w-48 rounded-2xl shadow-lg rotate-1 z-10"
+  />
+</div>
+
         </div>
 
         {/* ---------- Mission & Vision ---------- */}

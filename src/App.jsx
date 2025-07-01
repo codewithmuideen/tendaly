@@ -22,6 +22,7 @@ import HowItWorksCombined from './components/HowItWorksCombined';
 import Testimonials from './pages/Testimonials';
 import FeaturesPage from './pages/FeaturesPage';
 import FindCarePage from './pages/FindCarePage';
+import ScrollToHash from './ScrollToHash';
 // import Cta from './components/Cta';
 
 
@@ -45,6 +46,7 @@ function App() {
       ) : (
         <div className="bg-white text-brand-gray-text">
           <GlobalStyles />
+          <ScrollToHash />
           <TopHeader />
           {/* <Header /> */}
 

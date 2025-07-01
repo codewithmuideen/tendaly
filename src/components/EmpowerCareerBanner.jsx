@@ -13,10 +13,10 @@ const EmpowerCareerBanner = () => {
             ease, and work on your own terms.
           </p>
           <a
-            href="/signup"
+            href="/waitlist"
             className="inline-block bg-[#00b2e3] hover:bg-[#00a1cf] text-white font-semibold py-3 px-10 rounded-full transition-colors duration-300"
           >
-            Start Your Application
+             Join wait list now!
           </a>
         </div>
       </div>

@@ -10,7 +10,7 @@ const featuresData = [
     title: 'AI-Powered Matching',
     heading: 'Smart caregiver matching with Tendaly',
     description:
-      'Our intelligent system matches care seekers with the most suitable providers based on needs, availability, and preferences — ensuring the right fit every time.',
+      'Our intelligent system matches care seekers with the most suitable providers based on needs, availability, and preferences ensuring the right fit every time.',
     image: 'https://placehold.co/800x600/3B82F6/FFFFFF?text=AI+Matching',
     url: '',
   },
@@ -20,7 +20,7 @@ const featuresData = [
     description:
       'Communicate safely within Tendaly. Our encrypted messaging keeps discussions confidential and compliant.',
     image: 'https://placehold.co/800x600/10B981/FFFFFF?text=Messaging',
-    url: '',
+    url: '/waitlist',
   },
   {
     title: 'Background-Checked Providers',
@@ -28,7 +28,7 @@ const featuresData = [
     description:
       'Every caregiver on Tendaly is thoroughly vetted, so families can feel confident in their choice of care.',
     image: 'https://placehold.co/800x600/8B5CF6/FFFFFF?text=Vetting',
-    url: '',
+    url: '/waitlist',
   },
   {
     title: 'Secure Booking & Payments',
@@ -36,7 +36,7 @@ const featuresData = [
     description:
       'Book care with just a few taps. Tendaly makes it easy to manage appointments and pay securely through the app.',
     image: 'https://placehold.co/800x600/F97316/FFFFFF?text=Booking',
-    url: '',
+    url: '/waitlist',
   },
   {
     title: 'Ratings & Reviews',
@@ -44,7 +44,7 @@ const featuresData = [
     description:
       'Care seekers can read verified reviews and ratings, helping everyone make informed decisions.',
     image: 'https://placehold.co/800x600/EC4899/FFFFFF?text=Reviews',
-    url: '',
+    url: '/waitlist',
   },
   {
     title: 'Emergency & Backup Care',
@@ -52,7 +52,7 @@ const featuresData = [
     description:
       'Unexpected situation? Tendaly helps you find urgent care providers in your area, fast.',
     image: 'https://placehold.co/800x600/EF4444/FFFFFF?text=Emergency',
-    url: '',
+    url: '/waitlist',
   },
   {
     title: 'Location-Based Search',
@@ -60,7 +60,7 @@ const featuresData = [
     description:
       'Use Tendaly’s GPS-enabled search to connect with caregivers near your home or loved one’s location.',
     image: 'https://placehold.co/800x600/06B6D4/FFFFFF?text=Location',
-    url: '#',
+    url: '/waitlist',
   },
 ];
 

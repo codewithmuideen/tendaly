@@ -35,7 +35,7 @@ const SiteFooter = () => {
     { name: 'Become a caregiver', href: '/provider' },
     { name: 'About Us', href: '/about' },
     { name: 'Features', href: '/features' },
-    { name: 'FAQs', href: '' },
+    { name: 'FAQs', href: '/#faq' },
     { name: 'Contact Us', href: '/contact' },
   ];
 

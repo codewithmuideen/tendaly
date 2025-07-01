@@ -29,7 +29,7 @@ const benefits = [
 
 const testimonials = [
   { quote: "Tendaly gave me the flexibility I needed to balance my work and family life. Finding clients has never been easier!", name: "Tiffany Chapin", role: "Registered Nurse", avatar: "https://i.pravatar.cc/100?u=aisha" },
-  { quote: "The platform's tools are incredible. Secure messaging and automated payments let me focus on what I do best—providing quality care.", name: "Jessical Paige", role: "Certified Caregiver", avatar: "https://i.pravatar.cc/100?u=samuel" },
+  { quote: "The platform's tools are incredible. Secure messaging and automated payments let me focus on what I do best providing quality care.", name: "Jessica Paige", role: "Certified Caregiver", avatar: "https://i.pravatar.cc/100?u=samuel" },
 ];
 
 const faqs = [
@@ -181,10 +181,10 @@ const BecomeProvider = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            href="/signup"
+            href="/waitlist"
             className="bg-sky-500 text-white font-bold px-8 py-4 rounded-full hover:bg-sky-600 transition-all duration-300 inline-block transform hover:scale-105"
           >
-            Start Your Application
+            Get Started
           </motion.a>
         </div>
         <div className="absolute top-0 left-0 w-full h-full bg-indigo-800/20 z-0" />
@@ -291,10 +291,10 @@ const BecomeProvider = () => {
               Create your free profile today and start connecting with families who need your expertise.
             </p>
             <a
-              href="/signup"
+              href="/waitlist"
               className="bg-sky-500 text-white font-bold px-8 py-4 rounded-full hover:bg-sky-600 transition-all duration-300 inline-block transform hover:scale-105"
             >
-              Apply Now and Get Started
+             Join wait list now!
             </a>
           </div>
         </section>

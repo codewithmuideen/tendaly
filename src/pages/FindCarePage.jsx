@@ -1,11 +1,75 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaSearch, FaUserCheck, FaCalendarCheck } from 'react-icons/fa';
-import FindCareBanner from '../components/FindCareBanner';
 
+/* -------------------------------------------------------------------------- */
+/*  FindCareBanner — now completely self‑contained with its own modal.         */
+/* -------------------------------------------------------------------------- */
+const FindCareBanner = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  return (
+    <section className="bg-gradient-to-r from-[#f2f4f7] to-[#f2f4f7] text-black text-center relative">
+      <div className="border-t border-white/30">
+        <div className="container mx-auto px-4 py-20 md:py-28">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            Find Trusted Care with Ease
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+            Tendaly connects you with reliable, vetted caregivers for your unique needs,
+            whether it’s for your family, loved ones, or yourself.
+          </p>
+          <button
+            onClick={() => setShowModal(true)}
+            className="inline-block bg-[#0b5aad] hover:bg-[#0099ff] text-white font-semibold py-3 px-10 rounded-full transition-colors duration-300"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+
+      {/* Modal */}
+      {showModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+          onClick={() => setShowModal(false)}
+        >
+          <div
+            className="bg-white max-w-sm w-full rounded-xl p-6 shadow-xl"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking modal itself
+          >
+            <h2 className="text-xl font-bold text-gray-800 mb-3">Coming Soon</h2>
+            <p className="text-gray-600 mb-6">
+              Our application is currently in development and will be launching soon.
+              Be the first to know — join our waitlist now!
+            </p>
+            <div className="flex justify-end gap-3">
+              <button
+                className="px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100"
+                onClick={() => setShowModal(false)}
+              >
+                Close
+              </button>
+              <a
+                href="/waitlist"
+                className="bg-[#0099FF] text-white px-4 py-2 rounded-md hover:bg-[#0B5AAD]"
+              >
+                Join Waitlist
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+};
+
+/* -------------------------------------------------------------------------- */
+/*  FindCarePage                                                               */
+/* -------------------------------------------------------------------------- */
 const FindCarePage = () => {
   return (
     <div className="bg-[#f9fafb] text-gray-800">
-      {/* Hero Banner */}
+      {/* Hero Banner with embedded modal */}
       <FindCareBanner />
 
       {/* Benefits Section */}
@@ -54,22 +118,6 @@ const FindCarePage = () => {
               <p className="text-gray-600">Pay securely through Tendaly and manage all bookings in your dashboard.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-gradient-to-r from-[#0b5aad] to-[#0099ff] text-white text-center">
-        <div className="container mx-auto px-4 py-20">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Find Care?</h2>
-          <p className="text-lg max-w-2xl mx-auto mb-8">
-            Whether for your child, parent, pet, or loved one — Tendaly is here to help you find the perfect caregiver.
-          </p>
-          <a
-            href="/signup"
-            className="inline-block bg-white text-[#0b5aad] font-semibold py-3 px-10 rounded-full hover:bg-gray-100 transition duration-300"
-          >
-            Create an Account
-          </a>
         </div>
       </section>
     </div>

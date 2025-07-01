@@ -12,7 +12,7 @@ const FindCareBanner = () => {
             Tendaly connects you with reliable, vetted caregivers for your unique needs, whether it’s for your family, loved ones, or yourself.
           </p>
           <a
-            href="/find-care"
+            href="/waitlist"
             className="inline-block bg-[#0b5aad] hover:bg-[#0099ff] text-white font-semibold py-3 px-10 rounded-full transition-colors duration-300"
           >
             Get Started
