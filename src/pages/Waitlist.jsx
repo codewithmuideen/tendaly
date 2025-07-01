@@ -163,6 +163,18 @@ const Waitlist = () => {
       className="w-full bg-[#F2F4F7] placeholder-gray-500 text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0099FF]"
     />
   </div>
+  <div>
+  <label htmlFor="message" className="block font-medium text-gray-700 mb-1">
+    Send us a message <span className="text-gray-400">(optional)</span>
+  </label>
+  <textarea
+    id="message"
+    name="message"
+    rows={4}
+    placeholder="Type your message here..."
+    className="w-full bg-[#F2F4F7] placeholder-gray-500 text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0099FF] resize-none"
+  />
+</div>
 
   {/* Submit */}
   <button

@@ -32,7 +32,7 @@ const SiteFooter = () => {
   const [showModal, setShowModal] = useState(false);
 
   const companyLinks = [
-    { name: 'Become a caregiver', href: '/provider' },
+    { name: 'Become a care provider', href: '/provider' },
     { name: 'About Us', href: '/about' },
     { name: 'Features', href: '/features' },
     { name: 'FAQs', href: '/#faq' },
