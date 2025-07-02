@@ -36,8 +36,10 @@ const HeroComponent = () => {
               At Every Stage of Life
             </h1>
             <p className="mt-6 text-lg text-slate-600 max-w-lg mx-auto lg:mx-0">
-              Tendaly connects families with trusted care providers. Find care, offer care, 
-              and manage everything from your phone. It's fast, secure, and designed for everyone.
+             Tendaly connects families with trusted care providers through secure, easy-to-use technology. 
+             Whether you need care or provide care, you can manage everything right from your phone. 
+             Our AI-powered matching ensures faster, smarter connections tailored to your unique needs, making care simple, safe, 
+             and accessible for everyone.
             </p>
 
             {/* Store buttons */}

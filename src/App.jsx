@@ -26,6 +26,8 @@ import ScrollToHash from './ScrollToHash';
 import TermsOfUsePage from './pages/TermsOfUsePage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import MissionComponent from './pages/MissionComponent';
+import DataDeletionPage from './pages/DataDeletionPage';
+import PrivacyRequestPage from './pages/PrivacyRequestPage';
 // import Cta from './components/Cta';
 
 
@@ -69,7 +71,9 @@ function App() {
               <Route path="/features" element={<FeaturesPage />} />
               <Route path="/terms-of-service" element={<TermsOfUsePage />} />
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-              <Route path="/donate" element={<MissionComponent />} />
+              <Route path="/donation" element={<MissionComponent />} />
+              <Route path="/data-deletion" element={<DataDeletionPage />} />
+              <Route path="/requests" element={<PrivacyRequestPage />} />
             </Routes>
           </main>
           {/* <Cta /> */}

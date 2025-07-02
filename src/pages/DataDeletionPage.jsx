@@ -57,7 +57,7 @@ const ListItem = ({ children }) => (
 
 
 // --- Main Page Component ---
-const PrivacyPolicyPage = () => {
+const DataDeletionPage = () => {
   return (
     <div className="bg-white font-sans">
       <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
@@ -73,7 +73,7 @@ const PrivacyPolicyPage = () => {
         <div className="text-center mb-16">
           <p className="text-sm text-slate-500 mb-4">Last Updated: April 05, 2025</p>
           <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
-            Privacy Policy
+           Data Deletion
           </h1>
         </div>
 
@@ -84,7 +84,7 @@ const PrivacyPolicyPage = () => {
           </p>
         </Section>
         
-        {/* <Section title="Data Collection Practices">
+        <Section title="Data Collection Practices">
             <ul className="space-y-2">
                 {dataCollectionCategories.map(item => (
                     <li key={item.title}><strong>{item.title}:</strong> {item.content}</li>
@@ -99,8 +99,8 @@ const PrivacyPolicyPage = () => {
                 We do not sell or rent user data to third parties. Data may be shared with trusted partners or service providers who support platform functionality (e.g., payment processors, background check vendors), subject to strict confidentiality obligations.
             </p>
         </Section>
-         */}
-        {/* <Section title="User Rights">
+        
+        <Section title="User Rights">
             <p>Users have the right to:</p>
             <ul className="space-y-3">
                 {userRights.map(right => <ListItem key={right}>{right}</ListItem>)}
@@ -114,7 +114,7 @@ const PrivacyPolicyPage = () => {
                     We use encryption, access controls, and secure data storage practices to protect your information from unauthorized access, disclosure, alteration, or destruction.
                 </p>
             </div>
-        </Section> */}
+        </Section>
 
         {/* --- VISUAL SEPARATOR FOR INTERNATIONAL SECTION --- */}
         <div className="relative my-16">
@@ -128,63 +128,10 @@ const PrivacyPolicyPage = () => {
           </div>
         </div>
 
-        {/* --- INTERNATIONAL PRIVACY POLICY --- */}
-        <div className="text-center">
-            <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                Privacy Policy for International Use
-            </h1>
-        </div>
-        
-        <Section title="International Data Protection and Compliance Disclaimer">
-          <p>
-            Tendaly is committed to protecting the personal data of all users, regardless of their location. We comply with relevant data protection and privacy laws, including but not limited to the General Data Protection Regulation (EU GDPR & UK GDPR) and the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA).
-          </p>
-        </Section>
-
-        <Section title="For Users in the European Union and United Kingdom (GDPR/UK GDPR)">
-          <p>If you are located in the EU or UK, you have specific rights under the GDPR:</p>
-          <div className="space-y-4 !mt-6">
-            {gdprRights.map(right => (
-              <div key={right.title}>
-                <h4 className="font-semibold text-slate-800">{right.title}</h4>
-                <p className="text-slate-600">{right.content}</p>
-              </div>
-            ))}
-          </div>
-          <p>
-            Tendaly operates in the United States. If you are accessing our services from outside the U.S., you consent to the transfer of your data to the U.S. or other jurisdictions that may not have equivalent data protection laws.
-          </p>
-          <p>
-            For GDPR-related inquiries or to exercise your rights, contact us at: <a href="mailto:privacy@tendaly.com" className="text-indigo-600 font-medium hover:underline">privacy@tendaly.com</a>
-          </p>
-        </Section>
-
-        <Section title="For California Residents (CCPA/CPRA)">
-            <p>If you are a California resident, you have the following rights under CCPA/CPRA:</p>
-            <div className="space-y-4 !mt-6">
-                {ccpaRights.map(right => (
-                    <div key={right.title}>
-                        <h4 className="font-semibold text-slate-800">{right.title}</h4>
-                        <p className="text-slate-600">{right.content}</p>
-                    </div>
-                ))}
-            </div>
-            <p>
-                You can exercise these rights by emailing us at: <a href="mailto:privacy@tendaly.com" className="text-indigo-600 font-medium hover:underline">privacy@tendaly.com</a> or by visiting: <a href="/requests" className="text-indigo-600 font-medium hover:underline">www.tendaly.com/privacy-requests</a>
-            </p>
-            <p>
-                If you are an authorized agent making a request on behalf of a California resident, you must provide written permission or a legal power of attorney, along with identity verification.
-            </p>
-        </Section>
-
-        <Section title="Children’s Privacy (COPPA & GDPR)">
-            <p>
-                Tendaly does not knowingly collect or process personal data from children under the age of 13 (or under 16 in jurisdictions that require parental consent for data processing). If we learn we have collected personal data from a child without verified parental consent, we will delete that information promptly.
-            </p>
-        </Section>
+       
       </div>
     </div>
   );
 };
 
-export default PrivacyPolicyPage;
+export default DataDeletionPage;

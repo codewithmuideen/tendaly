@@ -7,12 +7,11 @@ import {
   FaLinkedinIn,
   FaYoutube,
   FaApple,
-  FaArrowUp,          // ← added
+  FaArrowUp,
 } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 import images from '../constants/images';
 
-// FooterLinkColumn supports className now ✅
 const FooterLinkColumn = ({ title, links, className = '' }) => (
   <div className={className}>
     <h3 className="text-lg font-bold text-white">{title}</h3>
@@ -33,23 +32,24 @@ const SiteFooter = () => {
 
   const companyLinks = [
     { name: 'About Us', href: '/about' },
-     { name: 'FAQs', href: '/#faq' },
+    { name: 'FAQs', href: '/#faq' },
     { name: 'Careers', href: '' },
     { name: 'Press', href: '' },
     { name: 'Blog', href: '' },
-    // { name: 'FAQs', href: '/#faq' },
-    // { name: 'Contact Us', href: '/contact' },
   ];
 
-  const moreLinks = [
-    // { name: 'For Home Care Agencies', href: '/provider' },
-    // { name: 'For Employers', href: '/provider' },
-    // { name: 'Support a care mission', href: '/donate' },
-     { name: 'Help Center', href: '' },
+  const supportLinks = [
+     { name: 'Help Center', href: '/contact' },
      { name: 'Safety', href: '' },
      { name: 'Terms of Service', href: '/terms-of-service' },
      { name: 'Privacy Policy', href: '/privacy-policy' },
-     { name: 'Data Deletion', href: '' },
+     { name: 'Data Deletion', href: '/data-deletion' },
+  ];
+
+  const moreLinks = [
+    { name: 'For Home Care Agencies', href: '/provider' },
+    { name: 'For Employers', href: '/provider' },
+    { name: 'Support a care mission', href: '/donation' },
   ];
 
   const socialLinks = [
@@ -85,7 +85,7 @@ const SiteFooter = () => {
                   <FaApple size={18} className="mr-2 shrink-0" />
                   <div className="text-left leading-tight">
                     <span className="block text-[11px]">Download on</span>
-                    <span className="block text-sm font-bold">Apple&nbsp;Store</span>
+                    <span className="block text-sm font-bold">Apple Store</span>
                   </div>
                 </button>
 
@@ -98,48 +98,42 @@ const SiteFooter = () => {
                   <SiGoogleplay size={18} className="mr-2 shrink-0" />
                   <div className="text-left leading-tight">
                     <span className="block text-[11px]">Download on</span>
-                    <span className="block text-sm font-bold">Play&nbsp;Store</span>
+                    <span className="block text-sm font-bold">Play Store</span>
                   </div>
                 </button>
               </div>
             </div>
 
             {/* Link Columns */}
-            <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 xl:col-span-3 xl:mt-0">
+            <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3 xl:col-span-3 xl:mt-0">
               <FooterLinkColumn className="font-nunito" title="Company" links={companyLinks} />
-              <FooterLinkColumn className="font-nunito" title="Support" links={moreLinks} />
-              <div className="font-nunito">
-                <h3 className="text-lg font-bold text-white">Connect</h3>
-                <div className="mt-6 flex space-x-4">
-                  {socialLinks.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="rounded-full bg-[#3A3D40] p-2.5 text-gray-300 hover:text-white"
-                    >
-                      <span className="sr-only">{item.name}</span>
-                      <item.icon className="h-5 w-5" aria-hidden="true" />
-                    </a>
-                  ))}
-                </div>
-              </div>
+              <FooterLinkColumn className="font-nunito" title="Support" links={supportLinks} />
+              <FooterLinkColumn className="font-nunito" title="More" links={moreLinks} />
             </div>
           </div>
 
           {/* Footer Bottom */}
-          <div className="mt-16 flex flex-col items-center justify-between border-t border-white/10 pt-8 sm:mt-20 sm:flex-row lg:mt-24">
-            {/* <div className="flex space-x-6 text-sm leading-6 text-gray-400">
-              <a href="/terms-of-service" className="hover:text-white">Terms of Service</a>
-              <a href="/private-policy" className="hover:text-white">Privacy Policy</a>
-            </div> */}
-            <p className="mt-4 text-sm leading-6 text-gray-400 sm:mt-0">
+          <div className="mt-16 flex flex-col-reverse items-center gap-y-4 border-t border-white/10 pt-8 sm:mt-20 sm:flex-row sm:justify-between lg:mt-24">
+            <p className="text-sm leading-6 text-gray-400">
               © Copyright 2025, All Rights Reserved
             </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="rounded-full bg-[#3A3D40] p-2.5 text-gray-300 hover:text-white"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon className="h-5 w-5" aria-hidden="true" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </footer>
 
-      {/* === Back‑to‑Top Button (added) === */}
+      {/* === Back‑to‑Top Button === */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-[#0b5aad] text-white shadow-lg
