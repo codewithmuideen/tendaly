@@ -13,11 +13,19 @@ const TermsOfUsePage = () => {
   return (
     <div className="bg-slate-50 min-h-screen font-sans">
       <div className="mx-auto max-w-3xl px-6 py-20 sm:py-28">
+
+        {/* --- Back to Home Link --- */}
+        <div className="mb-12">
+          <a href="/" className="text-indigo-600 hover:text-indigo-800 font-semibold inline-flex items-center">
+            ← Back to Home
+          </a>
+        </div>
         
         {/* --- Page Header --- */}
         <div className="text-center mb-16">
+          <p className="text-sm text-slate-500 mb-4">Last Updated: April 04, 2025</p>
           <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
-            Terms of Use
+            Terms of Service
           </h1>
           <div className="mt-4 h-1 w-20 bg-indigo-500 mx-auto rounded-full" />
         </div>

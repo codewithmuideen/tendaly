@@ -32,17 +32,24 @@ const SiteFooter = () => {
   const [showModal, setShowModal] = useState(false);
 
   const companyLinks = [
-    { name: 'Become a care provider', href: '/provider' },
     { name: 'About Us', href: '/about' },
-    { name: 'Features', href: '/features' },
-    { name: 'FAQs', href: '/#faq' },
-    { name: 'Contact Us', href: '/contact' },
+     { name: 'FAQs', href: '/#faq' },
+    { name: 'Careers', href: '' },
+    { name: 'Press', href: '' },
+    { name: 'Blog', href: '' },
+    // { name: 'FAQs', href: '/#faq' },
+    // { name: 'Contact Us', href: '/contact' },
   ];
 
   const moreLinks = [
-    { name: 'For Home Care Agencies', href: '/provider' },
-    { name: 'For Employers', href: '/provider' },
-    { name: 'Support a care mission', href: '/donate' },
+    // { name: 'For Home Care Agencies', href: '/provider' },
+    // { name: 'For Employers', href: '/provider' },
+    // { name: 'Support a care mission', href: '/donate' },
+     { name: 'Help Center', href: '' },
+     { name: 'Safety', href: '' },
+     { name: 'Terms of Service', href: '/terms-of-service' },
+     { name: 'Privacy Policy', href: '/privacy-policy' },
+     { name: 'Data Deletion', href: '' },
   ];
 
   const socialLinks = [
@@ -100,7 +107,7 @@ const SiteFooter = () => {
             {/* Link Columns */}
             <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 xl:col-span-3 xl:mt-0">
               <FooterLinkColumn className="font-nunito" title="Company" links={companyLinks} />
-              <FooterLinkColumn className="font-nunito" title="More" links={moreLinks} />
+              <FooterLinkColumn className="font-nunito" title="Support" links={moreLinks} />
               <div className="font-nunito">
                 <h3 className="text-lg font-bold text-white">Connect</h3>
                 <div className="mt-6 flex space-x-4">
@@ -121,10 +128,10 @@ const SiteFooter = () => {
 
           {/* Footer Bottom */}
           <div className="mt-16 flex flex-col items-center justify-between border-t border-white/10 pt-8 sm:mt-20 sm:flex-row lg:mt-24">
-            <div className="flex space-x-6 text-sm leading-6 text-gray-400">
-              <a href="/terms-of-use" className="hover:text-white">Terms of Use</a>
+            {/* <div className="flex space-x-6 text-sm leading-6 text-gray-400">
+              <a href="/terms-of-service" className="hover:text-white">Terms of Service</a>
               <a href="/private-policy" className="hover:text-white">Privacy Policy</a>
-            </div>
+            </div> */}
             <p className="mt-4 text-sm leading-6 text-gray-400 sm:mt-0">
               © Copyright 2025, All Rights Reserved
             </p>

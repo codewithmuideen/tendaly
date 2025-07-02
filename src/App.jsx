@@ -67,8 +67,8 @@ function App() {
               <Route path="/how-it-works" element={<HowItWorksCombined />} />
               <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/features" element={<FeaturesPage />} />
-              <Route path="/terms-of-use" element={<TermsOfUsePage />} />
-              <Route path="/private-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/terms-of-service" element={<TermsOfUsePage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
               <Route path="/donate" element={<MissionComponent />} />
             </Routes>
           </main>
