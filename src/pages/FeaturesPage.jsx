@@ -84,9 +84,9 @@ const FeaturesPage = () => {
 </h2>
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-serif text-4xl font-bold tracking-tight text-indigo-900 sm:text-5xl"  style={{fontFamily:'Nunito'}}>
+          {/* <h2 className="font-serif text-4xl font-bold tracking-tight text-indigo-900 sm:text-5xl"  style={{fontFamily:'Nunito'}}>
             At the Core of Our Platform
-          </h2>
+          </h2> */}
           <p className="mt-6 text-lg leading-8 text-slate-600">
             Every feature is designed with your safety, convenience, and peace of mind at its heart.
           </p>

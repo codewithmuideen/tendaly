@@ -28,8 +28,42 @@ const benefits = [
 ];
 
 const testimonials = [
-  { quote: "Tendaly gave me the flexibility I needed to balance my work and family life. Finding clients has never been easier!", name: "Tiffany Chapin", role: "Registered Nurse", avatar: "https://i.pravatar.cc/100?u=aisha" },
-  { quote: "The platform's tools are incredible. Secure messaging and automated payments let me focus on what I do best providing quality care.", name: "Jessica Paige", role: "Certified Caregiver", avatar: "https://i.pravatar.cc/100?u=samuel" },
+  {
+    quote: "Tendaly gave me the flexibility I needed to balance my work and family life. Finding clients has never been easier!",
+    name: "Tiffany Chapin",
+    role: "Registered Nurse",
+    avatar: "https://media.istockphoto.com/id/2074983548/vector/default-placeholder-doctor-portrait-photo-avatar-on-gray-background-greyscale-female.jpg?s=612x612&w=0&k=20&c=kRx9BZpeg3WruAKBRDfBrd03P6sWyLW2PzLRUaQnueE="
+  },
+  {
+    quote: "The platform's tools are incredible. Secure messaging and automated payments let me focus on what I do best providing quality care.",
+    name: "Jessica Paige",
+    role: "Certified Caregiver",
+    avatar: "https://media.istockphoto.com/id/2077095666/vector/default-placeholder-doctor-portrait-photo-avatar-on-gray-background-greyscale-healthcare.jpg?s=612x612&w=0&k=20&c=en2o7NAtzp_udRQhckeWozkwHiXGz5KCRhTzY3Vbhdo="
+  },
+  {
+    quote: "Tendaly connected me with a kind caregiver within hours. As someone recovering from surgery, that speed meant everything.",
+    name: "Sophia Mendez",
+    role: "Short-Term Recovery Patient",
+    avatar: "https://media.istockphoto.com/id/1133765594/vector/person-gray-photo-placeholder-woman.jpg?s=612x612&w=0&k=20&c=3s8E3J67u8BQVb1Jp_emX5e8hgYHlymfH5yIwxJ-1NA="
+  },
+  {
+    quote: "I’ve worked with other caregiving platforms, but none are as intuitive and respectful as Tendaly. I feel truly supported.",
+    name: "Michael Adebayo",
+    role: "Home Health Aide",
+    avatar: "https://media.istockphoto.com/id/1127533460/vector/person-gray-photo-placeholder-man.jpg?s=612x612&w=0&k=20&c=LQxy_IP8l6qtbkSZrw3eHdHOejtzLSkDNRrxJ6rafb8="
+  },
+  {
+    quote: "Managing my father’s care remotely is easier than ever. I can see everything from visit notes to payments in one place.",
+    name: "Olivia Tran",
+    role: "Daughter & Family Coordinator",
+    avatar: "https://media.istockphoto.com/id/1934800192/vector/vector-illustration-depicting-female-face-silhouettes-or-icons-serving-as-avatars-or.jpg?s=612x612&w=0&k=20&c=RNKS7ZquP3reGRiVjepLcwioEtjK-sHniSQX9IDYyL4="
+  },
+  {
+    quote: "Tendaly helped me find work during a tough period. The weekly payments and great families have kept me going.",
+    name: "David Nwosu",
+    role: "Part-Time Caregiver",
+    avatar: "https://media.istockphoto.com/id/2060008471/vector/avatar-man-icon-profile-placeholder-anonymous-user-male-no-photo-web-template-default-user.jpg?s=612x612&w=0&k=20&c=D7X35MNlHIY5bSLOYhHvifEHJPu3Z9ydAKP3v1mjybI="
+  },
 ];
 
 const faqs = [
@@ -248,28 +282,31 @@ const BecomeProvider = () => {
         </section>
         
         {/* 4. Testimonials Section */}
-        <section className="py-20 sm:py-28 bg-slate-50">
-            <div className="container mx-auto px-6">
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 font-serif"  style={{fontFamily:'Nunito'}}>Trusted by Providers Like You</h2>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    {testimonials.map((t, i) => (
-                      <div key={i} className="bg-white p-8 rounded-lg shadow-lg">
-                        <FaQuoteLeft className="text-3xl text-indigo-200 mb-4"/>
-                        <p className="text-slate-600 italic mb-6">"{t.quote}"</p>
-                        <div className="flex items-center">
-                          <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full mr-4" />
-                          <div>
-                            <h4 className="font-bold text-indigo-900">{t.name}</h4>
-                            <p className="text-sky-500 text-sm font-semibold">{t.role}</p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                </div>
+       <section className="py-20 sm:py-28 bg-slate-50">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 font-serif" style={{ fontFamily: 'Nunito' }}>
+        Trusted by Providers Like You
+      </h2>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {testimonials.map((t, i) => (
+        <div key={i} className="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
+          <FaQuoteLeft className="text-3xl text-indigo-200 mb-4" />
+          <p className="text-slate-600 italic mb-6">"{t.quote}"</p>
+          <div className="flex items-center mt-auto">
+            <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full mr-4 object-cover" />
+            <div>
+              <h4 className="font-bold text-indigo-900">{t.name}</h4>
+              <p className="text-sky-500 text-sm font-semibold">{t.role}</p>
             </div>
-        </section>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
         {/* 5. FAQ Section */}
         <section className="py-20 sm:py-28 bg-white">

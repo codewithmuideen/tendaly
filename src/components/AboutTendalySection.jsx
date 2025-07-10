@@ -113,9 +113,9 @@ const AboutTendalySection = () => {
         {/* 3. "At the Core" Features Section */}
         <div className="mt-20 pt-20 sm:mt-28 sm:pt-28 border-t border-slate-200">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-serif text-4xl font-bold tracking-tight text-indigo-900 sm:text-5xl">
+            {/* <h2 className="font-serif text-4xl font-bold tracking-tight text-indigo-900 sm:text-5xl">
               At the Core of Our Platform
-            </h2>
+            </h2> */}
             <p className="mt-4 text-lg leading-8 text-slate-600">
               Every feature is designed with your safety, convenience, and peace of mind at its heart.
             </p>

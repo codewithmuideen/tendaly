@@ -40,8 +40,10 @@ import herome from "../assets/herome.png";
 import blackplay from "../assets/blackplay.png";
 import blackios from "../assets/blackios.png";
 import all from "../assets/all.png";
+import sticky4 from "../assets/sticky4.png";
 
 export default {
+  sticky4,
   all,
   app1,
   app2,
