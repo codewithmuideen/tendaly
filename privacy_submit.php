@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    $to = "halima@tendaly.com";
+    $to = "help@tendaly.com";
     $subject = "Privacy Request - $requestType";
 
     $message = "Privacy Request Submitted:\n\n" .

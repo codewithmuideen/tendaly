@@ -282,7 +282,7 @@ const BecomeProvider = () => {
         </section>
         
         {/* 4. Testimonials Section */}
-       <section className="py-20 sm:py-28 bg-slate-50">
+<section className="py-20 sm:py-28 bg-slate-50">
   <div className="container mx-auto px-6">
     <div className="text-center mb-12">
       <h2 className="text-4xl md:text-5xl font-bold text-indigo-900 font-serif" style={{ fontFamily: 'Nunito' }}>
@@ -299,6 +299,9 @@ const BecomeProvider = () => {
             <div>
               <h4 className="font-bold text-indigo-900">{t.name}</h4>
               <p className="text-sky-500 text-sm font-semibold">{t.role}</p>
+              <p className="mt-2 text-xs italic text-slate-400">
+               —Mock testimonial to illustrate expected user experience._
+              </p>
             </div>
           </div>
         </div>
@@ -306,6 +309,7 @@ const BecomeProvider = () => {
     </div>
   </div>
 </section>
+
 
 
         {/* 5. FAQ Section */}

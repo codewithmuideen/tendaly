@@ -67,6 +67,7 @@ const testimonials = [
 
 
 // --- Reusable Testimonial Card Component ---
+// --- Reusable Testimonial Card Component ---
 const TestimonialCard = ({ image, name, role, rating, review }) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -97,6 +98,10 @@ const TestimonialCard = ({ image, name, role, rating, review }) => {
             ))}
           </div>
         </div>
+        {/* Mock disclaimer */}
+        <p className="mt-4 text-xs italic text-slate-400">
+        —Mock testimonial to illustrate expected user experience._
+        </p>
       </div>
     </motion.div>
   );

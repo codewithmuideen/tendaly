@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Email settings
-    $to = "halima@tendaly.com";
+    $to = "help@tendaly.com";
     $mailSubject = "New Waitlist Signup - Tendaly";
 
     $body = "A new user has joined the Tendaly waitlist:\n\n" .
